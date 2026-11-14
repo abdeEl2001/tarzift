@@ -2,7 +2,7 @@
 // Edit these values, then redeploy.
 window.TARZIFT_CONFIG = {
   // Google Apps Script Web App URL (ends with /exec). Orders are sent here.
-  SHEET_URL: "",
+  SHEET_URL: "https://script.google.com/macros/s/AKfycbzQI0DQQkoLE0MoS7EJuPLh1aNMCNlLIPqDYckGzdyCSXwbKThJjHS4THskXhen0nMINA/exec",
 
   // WhatsApp number in international format, digits only (e.g. "212600000000"). Leave empty to hide the button.
   WHATSAPP: "",
