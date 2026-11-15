@@ -111,38 +111,69 @@ section{padding:46px 0}
 .preview-items .tag.ar{font-family:'Aref Ruqaa',serif}
 .preview-items .tag.lat{font-family:'Great Vibes',cursive;font-size:18px}
 
-form{background:var(--white);border:1px solid var(--champagne);border-radius:22px;padding:20px 18px}
-.fs-title{font-size:16px;font-weight:700;color:var(--leather);margin:4px 0 10px;display:flex;align-items:center;gap:8px}
-.fs-title i{width:24px;height:24px;border-radius:50%;background:var(--champagne);display:inline-flex;align-items:center;justify-content:center;font-style:normal;font-size:13px;color:var(--leather)}
-.field{margin-bottom:12px}
-.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-label{display:block;font-size:14px;font-weight:500;margin-bottom:5px}
-label .opt{color:var(--muted);font-weight:400;font-size:12px}
-input,select,textarea{width:100%;font:inherit;font-size:16px;color:var(--espresso);background:var(--ivory);border:1.5px solid var(--line);border-radius:11px;padding:12px 13px;outline:none;transition:border .15s,background .15s}
-input:focus,select:focus,textarea:focus{border-color:var(--gold);background:#fff}
-input.ar-name{font-family:'Aref Ruqaa',serif;font-size:20px;padding:8px 13px}
+form{background:var(--white);border:1px solid var(--champagne);border-radius:24px;padding:20px 18px 22px;box-shadow:0 18px 40px -28px rgba(91,52,32,.45)}
+.progress{display:flex;align-items:center;gap:10px;margin-bottom:20px}
+.ps{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:14px;font-weight:500;white-space:nowrap}
+.ps b{width:30px;height:30px;border-radius:50%;border:1.5px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:14px;background:#fff;transition:all .25s}
+.ps.on{color:var(--espresso)}
+.ps.on b{background:var(--gold);border-color:var(--gold);color:#fff}
+.ps.done b{background:var(--champagne);border-color:var(--champagne);color:var(--leather)}
+.pline{flex:1;height:3px;background:var(--champagne);border-radius:3px;overflow:hidden}
+.pline i{display:block;height:100%;width:0;background:var(--gold);transition:width .4s}
+form.s2 .pline i{width:100%}
+.pane[hidden]{display:none}
+.pane{animation:paneIn .35s ease}
+@keyframes paneIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.field{margin-bottom:16px}
+label,.lbl{display:block;font-size:14.5px;font-weight:700;margin-bottom:7px;color:var(--espresso)}
+.ig{position:relative}
+.ig+.ig{margin-top:8px}
+.ico{position:absolute;inset-inline-start:13px;top:50%;transform:translateY(-50%);width:20px;height:20px;color:var(--walnut);opacity:.65;pointer-events:none;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;font-family:'Tajawal',sans-serif}
+.ico svg{width:19px;height:19px}
+input,select,textarea{width:100%;font:inherit;font-size:16px;color:var(--espresso);background:#FDFBF7;border:1.5px solid #EDE3D0;border-radius:13px;padding:0 14px;height:52px;outline:none;transition:border .15s,background .15s,box-shadow .15s}
+html[dir=rtl] .ig input,html[dir=rtl] .ig select{padding-right:44px;padding-left:14px}
+html[dir=rtl] .ig select{padding-left:40px}
+html[dir=ltr] .ig input,html[dir=ltr] .ig select{padding-left:44px;padding-right:14px}
+html[dir=ltr] .ig select{padding-right:40px}
+textarea{height:auto;min-height:76px;padding:12px 14px;resize:vertical}
+input::placeholder,textarea::placeholder{color:#B3A797}
+input:focus,select:focus,textarea:focus{border-color:var(--gold);background:#fff;box-shadow:0 0 0 4px rgba(184,145,58,.13)}
+select{appearance:none;-webkit-appearance:none;padding-inline-end:40px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238A5A34' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:18px;background-position:left 14px center}
+html[dir=ltr] select{background-position:right 14px center}
+input.ar-name{font-family:'Aref Ruqaa',serif;font-size:21px}
 input.lat-name{direction:ltr;text-align:left}
-input[type=tel]{direction:ltr;text-align:right}
+input[type=tel]{direction:ltr;text-align:right;letter-spacing:.5px}
 html[lang=fr] input[type=tel]{text-align:left}
-textarea{min-height:70px;resize:vertical}
-.err{display:none;color:#B3261E;font-size:13px;margin-top:4px}
-.field.bad input,.field.bad select,.field.bad textarea{border-color:#B3261E;background:#FFF6F5}
+.hint{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+.err{display:none;color:#B3261E;font-size:13px;margin-top:5px}
+.field.bad input,.field.bad select,.field.bad textarea{border-color:#D9534F;background:#FFF7F6}
 .field.bad .err{display:block}
-.msgs{display:grid;gap:8px}
-.msg{display:flex;gap:10px;align-items:center;border:1.5px solid var(--line);border-radius:11px;padding:10px 12px;cursor:pointer;background:var(--ivory)}
-.msg input{width:auto;accent-color:var(--gold)}
-.msg span{font-size:15px}
-.msg.on{border-color:var(--gold);background:#fff}
-.qty{display:flex;align-items:center;gap:0;border:1.5px solid var(--line);border-radius:11px;overflow:hidden;width:fit-content;background:var(--ivory)}
-.qty button{background:none;border:0;width:46px;height:46px;font-size:22px;cursor:pointer;color:var(--leather)}
-.qty output{min-width:40px;text-align:center;font-weight:700;font-size:18px}
-.summary{background:var(--ivory);border:1px dashed var(--line);border-radius:12px;padding:12px 14px;margin:14px 0;font-size:15px}
-.summary div{display:flex;justify-content:space-between}
-.summary .total{font-weight:700;font-size:19px;color:var(--espresso);border-top:1px solid var(--champagne);margin-top:6px;padding-top:6px}
+.field.bad .hint{display:none}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;background:var(--ivory);border:1px solid var(--champagne);border-radius:13px;padding:4px}
+.seg label{margin:0;font-weight:500;font-size:14px;text-align:center;padding:10px 4px;border-radius:10px;cursor:pointer;color:var(--muted);transition:all .2s;position:relative}
+.seg input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.seg label.on{background:#fff;color:var(--espresso);font-weight:700;box-shadow:0 1px 4px rgba(43,33,26,.12)}
+.card-pv{margin-top:10px;background:var(--ivory);border:1px dashed var(--line);border-radius:13px;padding:14px;text-align:center;font-family:'Amiri',serif;font-size:19px;color:var(--leather);line-height:1.5}
+#fCustom{margin-top:10px;margin-bottom:0}
+.mini{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--ivory);border:1px solid var(--champagne);border-radius:13px;padding:10px 14px;margin-bottom:18px;font-size:14px;color:var(--muted)}
+.mini strong{color:var(--espresso);font-size:17px;margin-inline-start:6px}
+.mini strong .ar{font-family:'Aref Ruqaa',serif}
+.mini strong .lat{font-family:'Great Vibes',cursive;font-size:21px;font-weight:400}
+.linkbtn{background:none;border:0;color:var(--gold-dark);font:inherit;font-size:14px;font-weight:700;cursor:pointer;padding:4px 0;text-decoration:underline;text-underline-offset:4px}
+.two{display:grid;grid-template-columns:1fr;gap:0}
+.summary{background:var(--ivory);border-radius:14px;padding:14px 16px;margin:6px 0 16px;font-size:15px}
+.summary .row{display:flex;justify-content:space-between;align-items:center;min-height:30px}
+.summary .total{font-weight:700;font-size:20px;color:var(--espresso);border-top:1px solid var(--champagne);margin-top:8px;padding-top:10px}
 .summary .total span:last-child{color:var(--gold)}
-.submit{width:100%;font-size:19px;padding:17px}
+.qty{display:flex;align-items:center;border:1.5px solid var(--line);border-radius:999px;overflow:hidden;background:#fff}
+.qty button{background:none;border:0;width:34px;height:32px;font-size:19px;cursor:pointer;color:var(--leather);line-height:1}
+.qty output{min-width:26px;text-align:center;font-weight:700;font-size:16px}
+.free{color:#2E7D4F;font-weight:700}
+.btn.next,.submit{width:100%;font-size:18px;padding:16px;border-radius:14px}
 .submit[disabled]{opacity:.7;cursor:wait}
-.form-note{text-align:center;font-size:13px;color:var(--muted);margin-top:10px}
+.form-note{display:flex;align-items:center;justify-content:center;gap:6px;text-align:center;font-size:13px;color:var(--muted);margin-top:12px}
+.form-note svg{width:16px;height:16px;flex:0 0 16px;color:var(--gold)}
+.back{display:block;margin:12px auto 0;color:var(--muted)}
 .hp{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden;clip:rect(0 0 0 0);pointer-events:none}
 
 /* faq */
@@ -325,72 +356,79 @@ footer .logo{margin-bottom:10px}
 
       <form id="orderForm" novalidate>
         <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="progress" aria-hidden="true">
+          <div class="ps on" id="ps1"><b>1</b><span data-i18n="p1">الهدية</span></div>
+          <div class="pline"><i></i></div>
+          <div class="ps" id="ps2"><b>2</b><span data-i18n="p2">التوصيل</span></div>
+        </div>
 
-        <div class="fs-title"><i>1</i><span data-i18n="f1">الإسم اللي غادي يتنقش</span></div>
-        <div class="row2">
-          <div class="field" id="fAr">
-            <label for="nameAr"><span data-i18n="lAr">بالعربية</span></label>
-            <input id="nameAr" name="engrave_ar" class="ar-name" dir="rtl" maxlength="16" placeholder="حسن" autocomplete="off">
+        <div class="pane" id="pane1">
+          <div class="field" id="fNames">
+            <span class="lbl" data-i18n="f1">الإسم اللي غادي يتنقش</span>
+            <div class="ig"><span class="ico">ع</span><input id="nameAr" name="engrave_ar" class="ar-name" dir="rtl" maxlength="16" placeholder="حسن" autocomplete="off" aria-label="الإسم بالعربية"></div>
+            <div class="ig"><span class="ico">Aa</span><input id="nameLat" name="engrave_latin" class="lat-name" dir="ltr" maxlength="16" placeholder="Hassan" autocomplete="off" aria-label="Prénom en latin"></div>
+            <span class="hint" data-i18n="hNames">كتب الإسم بالعربية، بالفرنسية، ولا بجوج</span>
+            <span class="err" data-i18n="eNames">دخل الإسم بالعربية أو بالفرنسية على الأقل</span>
           </div>
-          <div class="field" id="fLat">
-            <label for="nameLat"><span data-i18n="lLat">بالفرنسية</span></label>
-            <input id="nameLat" name="engrave_latin" class="lat-name" dir="ltr" maxlength="16" placeholder="Hassan" autocomplete="off">
+
+          <div class="field">
+            <span class="lbl" data-i18n="f2">بطاقة الإهداء</span>
+            <div class="seg" id="msgs" role="radiogroup">
+              <label class="on"><input type="radio" name="card" value="عطايا الله جميلة وأنت أجملها" checked><span data-i18n="mOurs">رسالتنا</span></label>
+              <label><input type="radio" name="card" value="custom"><span data-i18n="mCustom">رسالتي</span></label>
+              <label><input type="radio" name="card" value="none"><span data-i18n="mNone">بلا رسالة</span></label>
+            </div>
+            <div class="card-pv" id="cardPv">« عطايا الله جميلة وأنت أجملها »</div>
+            <div class="field" id="fCustom" style="display:none">
+              <textarea id="customMsg" name="custom_message" maxlength="90" data-i18n-ph="phMsg" placeholder="كتب الرسالة ديالك (90 حرف)"></textarea>
+              <span class="err" data-i18n="eMsg">كتب الرسالة ديالك</span>
+            </div>
           </div>
-        </div>
-        <div class="field" id="fNames" style="margin-top:-6px"><span class="err" data-i18n="eNames">دخل الإسم بالعربية أو بالفرنسية على الأقل</span></div>
 
-        <div class="fs-title"><i>2</i><span data-i18n="f2">بطاقة الإهداء</span></div>
-        <div class="field msgs" id="msgs">
-          <label class="msg on"><input type="radio" name="card" value="عطايا الله جميلة وأنت أجملها" checked><span>عطايا الله جميلة وأنت أجملها</span></label>
-          <label class="msg"><input type="radio" name="card" value="custom"><span data-i18n="mCustom">رسالة خاصة بيا</span></label>
-          <label class="msg"><input type="radio" name="card" value="none"><span data-i18n="mNone">بلا رسالة</span></label>
-        </div>
-        <div class="field" id="fCustom" style="display:none">
-          <textarea id="customMsg" name="custom_message" maxlength="90" data-i18n-ph="phMsg" placeholder="كتب الرسالة ديالك (90 حرف)"></textarea>
-          <span class="err" data-i18n="eMsg">كتب الرسالة ديالك</span>
+          <button type="button" class="btn next" id="toStep2" data-i18n="next">التالي: معلومات التوصيل</button>
         </div>
 
-        <div class="fs-title" style="margin-top:8px"><i>3</i><span data-i18n="f3">معلومات التوصيل</span></div>
-        <div class="field" id="fName">
-          <label for="fullName" data-i18n="lName">الإسم الكامل</label>
-          <input id="fullName" name="customer_name" autocomplete="name" maxlength="60">
-          <span class="err" data-i18n="eName">دخل الإسم الكامل</span>
-        </div>
-        <div class="field" id="fPhone">
-          <label for="phone" data-i18n="lPhone">رقم الهاتف</label>
-          <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="06 00 00 00 00" maxlength="16">
-          <span class="err" data-i18n="ePhone">دخل رقم هاتف مغربي صحيح</span>
-        </div>
-        <div class="field" id="fCity">
-          <label for="city" data-i18n="lCity">المدينة</label>
-          <select id="city" name="city"></select>
-          <span class="err" data-i18n="eCity">اختار المدينة</span>
-        </div>
-        <div class="field" id="fCityOther" style="display:none">
-          <input id="cityOther" name="city_other" maxlength="40" data-i18n-ph="phCity" placeholder="كتب إسم المدينة">
-          <span class="err" data-i18n="eCity2">كتب إسم المدينة</span>
-        </div>
-        <div class="field" id="fAddr">
-          <label for="address" data-i18n="lAddr">العنوان</label>
-          <input id="address" name="address" autocomplete="street-address" maxlength="140" data-i18n-ph="phAddr" placeholder="الحي، الزنقة، رقم الدار">
-          <span class="err" data-i18n="eAddr">دخل العنوان</span>
-        </div>
-        <div class="field">
-          <label data-i18n="lQty">الكمية</label>
-          <div class="qty"><button type="button" id="qMinus" aria-label="-">−</button><output id="qty">1</output><button type="button" id="qPlus" aria-label="+">+</button></div>
-        </div>
-        <div class="field">
-          <label for="note"><span data-i18n="lNote">ملاحظة</span> <span class="opt" data-i18n="optional">(اختياري)</span></label>
-          <textarea id="note" name="note" maxlength="200" data-i18n-ph="phNote" placeholder="مثلاً: إسم مختلف لكل بوكس، وقت التوصيل…"></textarea>
-        </div>
+        <div class="pane" id="pane2" hidden>
+          <div class="mini"><span><span data-i18n="giftFor">الهدية بإسم</span><strong id="miniName"></strong></span><button type="button" class="linkbtn" id="editStep1" data-i18n="edit">تعديل</button></div>
 
-        <div class="summary">
-          <div><span><span data-i18n="sumBox">البوكس</span> × <span id="sQty">1</span></span><span><span id="sSub">179</span> <span data-i18n="dh">درهم</span></span></div>
-          <div><span data-i18n="sumShip">التوصيل</span><span id="sShip"></span></div>
-          <div class="total"><span data-i18n="sumTotal">المجموع</span><span><span id="sTotal">179</span> <span data-i18n="dh">درهم</span></span></div>
+          <div class="field" id="fName">
+            <label for="fullName" data-i18n="lName">الإسم الكامل</label>
+            <div class="ig"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></span><input id="fullName" name="customer_name" autocomplete="name" maxlength="60" data-i18n-ph="phName" placeholder="الإسم والنسب"></div>
+            <span class="err" data-i18n="eName">دخل الإسم الكامل</span>
+          </div>
+          <div class="field" id="fPhone">
+            <label for="phone" data-i18n="lPhone">رقم الهاتف</label>
+            <div class="ig"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="06 00 00 00 00" maxlength="16"></div>
+            <span class="err" data-i18n="ePhone">دخل رقم هاتف مغربي صحيح</span>
+          </div>
+          <div class="field" id="fCity">
+            <label for="city" data-i18n="lCity">المدينة</label>
+            <div class="ig"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><select id="city" name="city"></select></div>
+            <span class="err" data-i18n="eCity">اختار المدينة</span>
+          </div>
+          <div class="field" id="fCityOther" style="display:none">
+            <input id="cityOther" name="city_other" maxlength="40" data-i18n-ph="phCity" placeholder="كتب إسم المدينة">
+            <span class="err" data-i18n="eCity2">كتب إسم المدينة</span>
+          </div>
+          <div class="field" id="fAddr">
+            <label for="address" data-i18n="lAddr">العنوان</label>
+            <div class="ig"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 11l8-7 8 7v9a1 1 0 0 1-1 1h-5v-6h-4v6H5a1 1 0 0 1-1-1z"/></svg></span><input id="address" name="address" autocomplete="street-address" maxlength="140" data-i18n-ph="phAddr" placeholder="الحي، الزنقة، رقم الدار"></div>
+            <span class="err" data-i18n="eAddr">دخل العنوان</span>
+          </div>
+          <div class="field" style="margin-top:-4px">
+            <button type="button" class="linkbtn" id="addNote" data-i18n="addNote">+ زيد ملاحظة</button>
+            <textarea id="note" name="note" maxlength="200" data-i18n-ph="phNote" placeholder="مثلاً: إسم مختلف لكل بوكس، وقت التوصيل…" style="display:none;margin-top:8px"></textarea>
+          </div>
+
+          <div class="summary">
+            <div class="row"><span data-i18n="sumBox">البوكس</span><div class="qty"><button type="button" id="qMinus" aria-label="-">−</button><output id="qty">1</output><button type="button" id="qPlus" aria-label="+">+</button></div></div>
+            <div class="row"><span data-i18n="sumShip">التوصيل</span><span id="sShip" class="free"></span></div>
+            <div class="row total"><span data-i18n="sumTotal">المجموع</span><span><span id="sTotal">179</span> <span data-i18n="dh">درهم</span></span></div>
+          </div>
+          <button type="submit" class="btn submit" id="submitBtn" data-i18n="submit">أكد الطلب — الدفع عند الاستلام</button>
+          <p class="form-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span data-i18n="formNote">ما كتخلص حتى توصلك الهدية. غادي نتصلو بيك باش نأكدو الطلب.</span></p>
+          <button type="button" class="linkbtn back" id="backStep1" data-i18n="back">رجوع</button>
         </div>
-        <button type="submit" class="btn submit" id="submitBtn" data-i18n="submit">أكد الطلب — الدفع عند الاستلام</button>
-        <p class="form-note" data-i18n="formNote">ما كتخلص حتى توصلك الهدية. غادي نتصلو بيك باش نأكدو الطلب.</p>
       </form>
     </div>
   </div>
@@ -443,8 +481,8 @@ const $ = s => document.querySelector(s), $$ = s => document.querySelectorAll(s)
 const CITIES = ["Casablanca","Rabat","Salé","Témara","Kénitra","Mohammedia","El Jadida","Settat","Berrechid","Khouribga","Béni Mellal","Marrakech","Safi","Essaouira","Agadir","Inezgane","Taroudant","Tiznit","Guelmim","Laâyoune","Dakhla","Ouarzazate","Errachidia","Fès","Meknès","Ifrane","Khénifra","Taza","Tanger","Tétouan","Larache","Ksar El Kébir","Al Hoceïma","Chefchaouen","Nador","Oujda","Berkane","Sidi Kacem","Sidi Slimane","Khémisset"];
 
 const T = {
- ar:{announce:"الدفع عند الاستلام · التوصيل لجميع مدن المغرب",badge:"منقوش بالإسم",eyebrow:"هدية للرجل",h1:"بوكس هدية <em>بإسم</em> من تحب",lead:"محفظة جلدية، قلم وسلسلة مفاتيح منقوشة بإسمه بالعربية والفرنسية، في علبة خشبية أنيقة مع بطاقة إهداء. هدية تبقى معه كل يوم.",dh:"درهم",cod:"الدفع عند الاستلام",cta:"اطلب الآن",ctaInside:"شنو كاين فالبوكس؟",t1:"توصيل لجميع المدن",t2:"الدفع عند الاستلام",t3:"نقش بالإسم",insideEyebrow:"محتوى البوكس",insideTitle:"4 قطع، كلها بإسمه",insideSub:"كل قطعة كتنقش بالإسم اللي كتختار، بالخط العربي والفرنسي.",i1:"محفظة جلدية",i1d:"الإسم بالذهبي على الوجه، ودعاء منقوش على الظهر.",i2:"قلم معدني",i2d:"قلم أنيق منقوش بالإسم.",i3:"سلسلة مفاتيح",i3d:"معدنية ودوارة، فيها الإسم بالعربية والفرنسية.",i4:"علبة خشبية + بطاقة",i4d:"غطاء أكريليك أسود بلوحة ذهبية فيها الإسم، وبطاقة إهداء.",galEyebrow:"صور حقيقية",galTitle:"شوف البوكس من قريب",occEyebrow:"لكل مناسبة",occTitle:"هدية مثالية لـ",o1:"عيد الميلاد",o2:"الزوج",o3:"الخطيب",o4:"الأب",o5:"الأخ",o6:"العيد",o7:"النجاح والتخرج",o8:"هدايا الشركات",stEyebrow:"كيفاش كتطلب",stTitle:"3 خطوات ساهلة",s1:"كتب الإسم",s1d:"دخل الإسم بالعربية و/أو بالفرنسية وشوف كيف غادي يبان.",s2:"كنعيطو ليك",s2d:"فريقنا كيتصل بيك باش يأكد الطلب والإسم قبل النقش.",s3:"كتوصلك وتخلص",s3d:"كتوصلك الهدية لباب الدار وكتخلص عند الاستلام.",ordEyebrow:"اطلب دابا",ordTitle:"صمم الهدية ديالك",ordSub:"كتب الإسم وشوف المعاينة مباشرة.",pvNote:"معاينة تقريبية لنقش الإسم على المحفظة",pv1:"القلم",pv2:"السلسلة",pv3:"العلبة",f1:"الإسم اللي غادي يتنقش",lAr:"بالعربية",lLat:"بالفرنسية",eNames:"دخل الإسم بالعربية أو بالفرنسية على الأقل",f2:"بطاقة الإهداء",mCustom:"رسالة خاصة بيا",mNone:"بلا رسالة",phMsg:"كتب الرسالة ديالك (90 حرف)",eMsg:"كتب الرسالة ديالك",f3:"معلومات التوصيل",lName:"الإسم الكامل",eName:"دخل الإسم الكامل",lPhone:"رقم الهاتف",ePhone:"دخل رقم هاتف مغربي صحيح",lCity:"المدينة",eCity:"اختار المدينة",phCity:"كتب إسم المدينة",eCity2:"كتب إسم المدينة",lAddr:"العنوان",phAddr:"الحي، الزنقة، رقم الدار",eAddr:"دخل العنوان",lQty:"الكمية",lNote:"ملاحظة",optional:"(اختياري)",phNote:"مثلاً: إسم مختلف لكل بوكس، وقت التوصيل…",sumBox:"البوكس",sumShip:"التوصيل",sumTotal:"المجموع",free:"مجاني",submit:"أكد الطلب — الدفع عند الاستلام",sending:"جاري الإرسال…",formNote:"ما كتخلص حتى توصلك الهدية. غادي نتصلو بيك باش نأكدو الطلب.",faqTitle:"أسئلة متكررة",q1:"كيفاش كنخلص؟",a1:"الدفع عند الاستلام، نقداً للموزع ملي توصلك الهدية.",q2:"واش كتوصلو لجميع المدن؟",a2:"إيه، كنوصلو لجميع مدن المغرب.",q3:"واش نقدر نكتب إسمين مختلفين؟",a3:"إيه، إلا طلبتي أكثر من بوكس كتب الأسماء فالملاحظة، وغادي نأكدوها معاك فالتيليفون.",q4:"شحال كيبقى النقش؟",a4:"النقش مصمم باش يبقى مع الاستعمال اليومي.",footer:"هدايا منقوشة بالإسم · المغرب",thanks:"شكراً! توصلنا بالطلب ديالك",thanksSub:"غادي نتصلو بيك قريب باش نأكدو الطلب والإسم.",waConfirm:"أكد عبر واتساب",close:"إغلاق",chooseCity:"اختار المدينة",otherCity:"مدينة أخرى",rOrder:"رقم الطلب",rNames:"الإسم",rCard:"البطاقة",rTotal:"المجموع",rCity:"المدينة",noCard:"بلا رسالة",errSend:"وقع مشكل فالإرسال. عاود المحاولة ولا تواصل معنا فواتساب.",waHello:"السلام، بغيت نأكد الطلب ديالي"},
- fr:{announce:"Paiement à la livraison · Livraison partout au Maroc",badge:"Gravé au prénom",eyebrow:"Cadeau pour homme",h1:"Le coffret cadeau <em>à son nom</em>",lead:"Portefeuille en cuir, stylo et porte-clés gravés à son prénom en arabe et en latin, dans un élégant coffret en bois avec carte message. Un cadeau qu'il gardera tous les jours.",dh:"DH",cod:"Paiement à la livraison",cta:"Commander",ctaInside:"Que contient le coffret ?",t1:"Livraison partout au Maroc",t2:"Paiement à la livraison",t3:"Gravure personnalisée",insideEyebrow:"Dans le coffret",insideTitle:"4 pièces, toutes à son nom",insideSub:"Chaque pièce est gravée avec le prénom de votre choix, en arabe et en latin.",i1:"Portefeuille en cuir",i1d:"Prénom doré sur le devant, invocation gravée au dos.",i2:"Stylo en métal",i2d:"Un stylo élégant gravé au prénom.",i3:"Porte-clés",i3d:"En métal, rotatif, avec le prénom en arabe et en latin.",i4:"Coffret en bois + carte",i4d:"Couvercle en acrylique noir avec plaque dorée au prénom, et carte message.",galEyebrow:"Vraies photos",galTitle:"Le coffret de plus près",occEyebrow:"Pour chaque occasion",occTitle:"Le cadeau idéal pour",o1:"Un anniversaire",o2:"Votre mari",o3:"Votre fiancé",o4:"Votre père",o5:"Votre frère",o6:"L'Aïd",o7:"Un diplôme",o8:"Cadeaux d'entreprise",stEyebrow:"Comment commander",stTitle:"3 étapes simples",s1:"Écrivez le prénom",s1d:"En arabe et/ou en latin, et voyez le rendu en direct.",s2:"On vous appelle",s2d:"Notre équipe vous appelle pour confirmer la commande et le prénom avant la gravure.",s3:"Livré, vous payez",s3d:"Le coffret arrive chez vous et vous payez à la réception.",ordEyebrow:"Commandez maintenant",ordTitle:"Personnalisez votre cadeau",ordSub:"Écrivez le prénom et voyez l'aperçu en direct.",pvNote:"Aperçu indicatif de la gravure sur le portefeuille",pv1:"Stylo",pv2:"Porte-clés",pv3:"Coffret",f1:"Prénom à graver",lAr:"En arabe",lLat:"En latin",eNames:"Entrez le prénom en arabe ou en latin au minimum",f2:"Carte message",mCustom:"Mon propre message",mNone:"Sans message",phMsg:"Votre message (90 caractères)",eMsg:"Écrivez votre message",f3:"Livraison",lName:"Nom complet",eName:"Entrez votre nom complet",lPhone:"Téléphone",ePhone:"Entrez un numéro marocain valide",lCity:"Ville",eCity:"Choisissez la ville",phCity:"Nom de la ville",eCity2:"Entrez le nom de la ville",lAddr:"Adresse",phAddr:"Quartier, rue, numéro",eAddr:"Entrez l'adresse",lQty:"Quantité",lNote:"Note",optional:"(facultatif)",phNote:"Ex. : un prénom différent par coffret, heure de livraison…",sumBox:"Coffret",sumShip:"Livraison",sumTotal:"Total",free:"Gratuite",submit:"Confirmer — paiement à la livraison",sending:"Envoi…",formNote:"Vous ne payez qu'à la réception. Nous vous appelons pour confirmer.",faqTitle:"Questions fréquentes",q1:"Comment je paie ?",a1:"Paiement à la livraison, en espèces au livreur à la réception.",q2:"Vous livrez dans toutes les villes ?",a2:"Oui, nous livrons partout au Maroc.",q3:"Puis-je graver des prénoms différents ?",a3:"Oui, si vous commandez plusieurs coffrets, écrivez les prénoms dans la note et nous les confirmerons par téléphone.",q4:"La gravure tient-elle ?",a4:"La gravure est faite pour résister à l'usage quotidien.",footer:"Cadeaux gravés au prénom · Maroc",thanks:"Merci ! Commande reçue",thanksSub:"Nous vous appelons très vite pour confirmer la commande et le prénom.",waConfirm:"Confirmer sur WhatsApp",close:"Fermer",chooseCity:"Choisissez la ville",otherCity:"Autre ville",rOrder:"N° de commande",rNames:"Prénom",rCard:"Carte",rTotal:"Total",rCity:"Ville",noCard:"Sans message",errSend:"Erreur d'envoi. Réessayez ou contactez-nous sur WhatsApp.",waHello:"Bonjour, je veux confirmer ma commande"}
+ ar:{announce:"الدفع عند الاستلام · التوصيل لجميع مدن المغرب",badge:"منقوش بالإسم",eyebrow:"هدية للرجل",h1:"بوكس هدية <em>بإسم</em> من تحب",lead:"محفظة جلدية، قلم وسلسلة مفاتيح منقوشة بإسمه بالعربية والفرنسية، في علبة خشبية أنيقة مع بطاقة إهداء. هدية تبقى معه كل يوم.",dh:"درهم",cod:"الدفع عند الاستلام",cta:"اطلب الآن",ctaInside:"شنو كاين فالبوكس؟",t1:"توصيل لجميع المدن",t2:"الدفع عند الاستلام",t3:"نقش بالإسم",insideEyebrow:"محتوى البوكس",insideTitle:"4 قطع، كلها بإسمه",insideSub:"كل قطعة كتنقش بالإسم اللي كتختار، بالخط العربي والفرنسي.",i1:"محفظة جلدية",i1d:"الإسم بالذهبي على الوجه، ودعاء منقوش على الظهر.",i2:"قلم معدني",i2d:"قلم أنيق منقوش بالإسم.",i3:"سلسلة مفاتيح",i3d:"معدنية ودوارة، فيها الإسم بالعربية والفرنسية.",i4:"علبة خشبية + بطاقة",i4d:"غطاء أكريليك أسود بلوحة ذهبية فيها الإسم، وبطاقة إهداء.",galEyebrow:"صور حقيقية",galTitle:"شوف البوكس من قريب",occEyebrow:"لكل مناسبة",occTitle:"هدية مثالية لـ",o1:"عيد الميلاد",o2:"الزوج",o3:"الخطيب",o4:"الأب",o5:"الأخ",o6:"العيد",o7:"النجاح والتخرج",o8:"هدايا الشركات",stEyebrow:"كيفاش كتطلب",stTitle:"3 خطوات ساهلة",s1:"كتب الإسم",s1d:"دخل الإسم بالعربية و/أو بالفرنسية وشوف كيف غادي يبان.",s2:"كنعيطو ليك",s2d:"فريقنا كيتصل بيك باش يأكد الطلب والإسم قبل النقش.",s3:"كتوصلك وتخلص",s3d:"كتوصلك الهدية لباب الدار وكتخلص عند الاستلام.",ordEyebrow:"اطلب دابا",ordTitle:"صمم الهدية ديالك",ordSub:"كتب الإسم وشوف المعاينة مباشرة.",pvNote:"معاينة تقريبية لنقش الإسم على المحفظة",pv1:"القلم",pv2:"السلسلة",pv3:"العلبة",f1:"الإسم اللي غادي يتنقش",lAr:"بالعربية",lLat:"بالفرنسية",eNames:"دخل الإسم بالعربية أو بالفرنسية على الأقل",f2:"بطاقة الإهداء",mOurs:"رسالتنا",mCustom:"رسالتي",mNone:"بلا رسالة",p1:"الهدية",p2:"التوصيل",hNames:"كتب الإسم بالعربية، بالفرنسية، ولا بجوج",next:"التالي: معلومات التوصيل",giftFor:"الهدية بإسم",edit:"تعديل",back:"رجوع",addNote:"+ زيد ملاحظة",phName:"الإسم والنسب",phMsg:"كتب الرسالة ديالك (90 حرف)",eMsg:"كتب الرسالة ديالك",f3:"معلومات التوصيل",lName:"الإسم الكامل",eName:"دخل الإسم الكامل",lPhone:"رقم الهاتف",ePhone:"دخل رقم هاتف مغربي صحيح",lCity:"المدينة",eCity:"اختار المدينة",phCity:"كتب إسم المدينة",eCity2:"كتب إسم المدينة",lAddr:"العنوان",phAddr:"الحي، الزنقة، رقم الدار",eAddr:"دخل العنوان",lQty:"الكمية",lNote:"ملاحظة",optional:"(اختياري)",phNote:"مثلاً: إسم مختلف لكل بوكس، وقت التوصيل…",sumBox:"البوكس",sumShip:"التوصيل",sumTotal:"المجموع",free:"مجاني",submit:"أكد الطلب — الدفع عند الاستلام",sending:"جاري الإرسال…",formNote:"ما كتخلص حتى توصلك الهدية. غادي نتصلو بيك باش نأكدو الطلب.",faqTitle:"أسئلة متكررة",q1:"كيفاش كنخلص؟",a1:"الدفع عند الاستلام، نقداً للموزع ملي توصلك الهدية.",q2:"واش كتوصلو لجميع المدن؟",a2:"إيه، كنوصلو لجميع مدن المغرب.",q3:"واش نقدر نكتب إسمين مختلفين؟",a3:"إيه، إلا طلبتي أكثر من بوكس كتب الأسماء فالملاحظة، وغادي نأكدوها معاك فالتيليفون.",q4:"شحال كيبقى النقش؟",a4:"النقش مصمم باش يبقى مع الاستعمال اليومي.",footer:"هدايا منقوشة بالإسم · المغرب",thanks:"شكراً! توصلنا بالطلب ديالك",thanksSub:"غادي نتصلو بيك قريب باش نأكدو الطلب والإسم.",waConfirm:"أكد عبر واتساب",close:"إغلاق",chooseCity:"اختار المدينة",otherCity:"مدينة أخرى",rOrder:"رقم الطلب",rNames:"الإسم",rCard:"البطاقة",rTotal:"المجموع",rCity:"المدينة",noCard:"بلا رسالة",errSend:"وقع مشكل فالإرسال. عاود المحاولة ولا تواصل معنا فواتساب.",waHello:"السلام، بغيت نأكد الطلب ديالي"},
+ fr:{announce:"Paiement à la livraison · Livraison partout au Maroc",badge:"Gravé au prénom",eyebrow:"Cadeau pour homme",h1:"Le coffret cadeau <em>à son nom</em>",lead:"Portefeuille en cuir, stylo et porte-clés gravés à son prénom en arabe et en latin, dans un élégant coffret en bois avec carte message. Un cadeau qu'il gardera tous les jours.",dh:"DH",cod:"Paiement à la livraison",cta:"Commander",ctaInside:"Que contient le coffret ?",t1:"Livraison partout au Maroc",t2:"Paiement à la livraison",t3:"Gravure personnalisée",insideEyebrow:"Dans le coffret",insideTitle:"4 pièces, toutes à son nom",insideSub:"Chaque pièce est gravée avec le prénom de votre choix, en arabe et en latin.",i1:"Portefeuille en cuir",i1d:"Prénom doré sur le devant, invocation gravée au dos.",i2:"Stylo en métal",i2d:"Un stylo élégant gravé au prénom.",i3:"Porte-clés",i3d:"En métal, rotatif, avec le prénom en arabe et en latin.",i4:"Coffret en bois + carte",i4d:"Couvercle en acrylique noir avec plaque dorée au prénom, et carte message.",galEyebrow:"Vraies photos",galTitle:"Le coffret de plus près",occEyebrow:"Pour chaque occasion",occTitle:"Le cadeau idéal pour",o1:"Un anniversaire",o2:"Votre mari",o3:"Votre fiancé",o4:"Votre père",o5:"Votre frère",o6:"L'Aïd",o7:"Un diplôme",o8:"Cadeaux d'entreprise",stEyebrow:"Comment commander",stTitle:"3 étapes simples",s1:"Écrivez le prénom",s1d:"En arabe et/ou en latin, et voyez le rendu en direct.",s2:"On vous appelle",s2d:"Notre équipe vous appelle pour confirmer la commande et le prénom avant la gravure.",s3:"Livré, vous payez",s3d:"Le coffret arrive chez vous et vous payez à la réception.",ordEyebrow:"Commandez maintenant",ordTitle:"Personnalisez votre cadeau",ordSub:"Écrivez le prénom et voyez l'aperçu en direct.",pvNote:"Aperçu indicatif de la gravure sur le portefeuille",pv1:"Stylo",pv2:"Porte-clés",pv3:"Coffret",f1:"Prénom à graver",lAr:"En arabe",lLat:"En latin",eNames:"Entrez le prénom en arabe ou en latin au minimum",f2:"Carte message",mOurs:"Notre message",mCustom:"Mon message",mNone:"Sans message",p1:"Le cadeau",p2:"Livraison",hNames:"En arabe, en latin, ou les deux",next:"Suivant : livraison",giftFor:"Gravure",edit:"Modifier",back:"Retour",addNote:"+ Ajouter une note",phName:"Prénom et nom",phMsg:"Votre message (90 caractères)",eMsg:"Écrivez votre message",f3:"Livraison",lName:"Nom complet",eName:"Entrez votre nom complet",lPhone:"Téléphone",ePhone:"Entrez un numéro marocain valide",lCity:"Ville",eCity:"Choisissez la ville",phCity:"Nom de la ville",eCity2:"Entrez le nom de la ville",lAddr:"Adresse",phAddr:"Quartier, rue, numéro",eAddr:"Entrez l'adresse",lQty:"Quantité",lNote:"Note",optional:"(facultatif)",phNote:"Ex. : un prénom différent par coffret, heure de livraison…",sumBox:"Coffret",sumShip:"Livraison",sumTotal:"Total",free:"Gratuite",submit:"Confirmer — paiement à la livraison",sending:"Envoi…",formNote:"Vous ne payez qu'à la réception. Nous vous appelons pour confirmer.",faqTitle:"Questions fréquentes",q1:"Comment je paie ?",a1:"Paiement à la livraison, en espèces au livreur à la réception.",q2:"Vous livrez dans toutes les villes ?",a2:"Oui, nous livrons partout au Maroc.",q3:"Puis-je graver des prénoms différents ?",a3:"Oui, si vous commandez plusieurs coffrets, écrivez les prénoms dans la note et nous les confirmerons par téléphone.",q4:"La gravure tient-elle ?",a4:"La gravure est faite pour résister à l'usage quotidien.",footer:"Cadeaux gravés au prénom · Maroc",thanks:"Merci ! Commande reçue",thanksSub:"Nous vous appelons très vite pour confirmer la commande et le prénom.",waConfirm:"Confirmer sur WhatsApp",close:"Fermer",chooseCity:"Choisissez la ville",otherCity:"Autre ville",rOrder:"N° de commande",rNames:"Prénom",rCard:"Carte",rTotal:"Total",rCity:"Ville",noCard:"Sans message",errSend:"Erreur d'envoi. Réessayez ou contactez-nous sur WhatsApp.",waHello:"Bonjour, je veux confirmer ma commande"}
 };
 let lang = "ar";
 try{ const s = localStorage.getItem("tz_lang"); if(s==="fr"||s==="ar") lang=s; }catch(e){}
@@ -471,10 +509,10 @@ $$(".lang button").forEach(b=>b.addEventListener("click",()=>{lang=b.dataset.lan
 $$(".js-price").forEach(el=>el.textContent=C.PRICE);
 let qty=1;
 function updateTotals(){
-  $("#qty").textContent=qty; $("#sQty").textContent=qty;
+  $("#qty").textContent=qty;
   const sub=qty*C.PRICE, ship=Number(C.DELIVERY_FEE)||0;
-  $("#sSub").textContent=sub;
   $("#sShip").textContent = ship ? `${ship} ${t("dh")}` : t("free");
+  $("#sShip").className = ship ? "" : "free";
   $("#sTotal").textContent=sub+ship;
 }
 $("#qMinus").onclick=()=>{ if(qty>1){qty--;updateTotals();} };
@@ -494,14 +532,19 @@ function preview(){
 nAr.addEventListener("input",preview); nLat.addEventListener("input",preview);
 
 /* card message */
-$$("#msgs input").forEach(r=>r.addEventListener("change",()=>{
-  $$("#msgs .msg").forEach(m=>m.classList.toggle("on", m.querySelector("input").checked));
-  $("#fCustom").style.display = r.value==="custom" && r.checked ? "block" : ($("#msgs input[value=custom]").checked?"block":"none");
-}));
+function syncCard(){
+  const v=$("#msgs input:checked").value;
+  $$("#msgs label").forEach(l=>l.classList.toggle("on", l.querySelector("input").checked));
+  $("#cardPv").style.display = (v!=="custom" && v!=="none") ? "block" : "none";
+  $("#fCustom").style.display = v==="custom" ? "block" : "none";
+  if(v==="custom") setTimeout(()=>$("#customMsg").focus(),50);
+}
+$$("#msgs input").forEach(r=>r.addEventListener("change",syncCard));
 $("#city").addEventListener("change",e=>{ $("#fCityOther").style.display = e.target.value==="__other" ? "block":"none"; });
+$("#addNote").onclick=()=>{ $("#addNote").style.display="none"; $("#note").style.display="block"; $("#note").focus(); };
 
 /* clear errors on edit */
-$$("form input, form select, form textarea").forEach(el=>el.addEventListener("input",()=>{ const f=el.closest(".field"); if(f) f.classList.remove("bad"); }));
+$$("form input, form select, form textarea").forEach(el=>el.addEventListener("input",()=>{ const f=el.closest(".field.bad")||el.closest(".field"); if(f) f.classList.remove("bad"); }));
 $("#city").addEventListener("change",()=>$("#fCity").classList.remove("bad"));
 
 function normPhone(p){
@@ -509,19 +552,39 @@ function normPhone(p){
   if(d.startsWith("+212")) d="0"+d.slice(4); else if(d.startsWith("00212")) d="0"+d.slice(5); else if(d.startsWith("212")&&d.length===12) d="0"+d.slice(3);
   return d;
 }
-function validate(){
-  let ok=true, first=null;
-  const bad=(id)=>{ $(id).classList.add("bad"); ok=false; if(!first) first=$(id); };
-  if(!nAr.value.trim() && !nLat.value.trim()) bad("#fNames");
-  if($("#msgs input[value=custom]").checked && !$("#customMsg").value.trim()) bad("#fCustom");
-  if($("#fullName").value.trim().length<3) bad("#fName");
-  if(!/^0[5-7]\d{8}$/.test(normPhone($("#phone").value))) bad("#fPhone");
-  if(!$("#city").value) bad("#fCity");
-  if($("#city").value==="__other" && !$("#cityOther").value.trim()) bad("#fCityOther");
-  if($("#address").value.trim().length<5) bad("#fAddr");
-  if(first) first.scrollIntoView({behavior:"smooth",block:"center"});
-  return ok;
+function checker(){ let ok=true, first=null; return {bad(id){ $(id).classList.add("bad"); ok=false; if(!first) first=$(id); }, done(){ if(first) first.scrollIntoView({behavior:"smooth",block:"center"}); return ok; }}; }
+function validate1(){
+  const c=checker();
+  if(!nAr.value.trim() && !nLat.value.trim()) c.bad("#fNames");
+  if($("#msgs input[value=custom]").checked && !$("#customMsg").value.trim()) c.bad("#fCustom");
+  return c.done();
 }
+function validate2(){
+  const c=checker();
+  if($("#fullName").value.trim().length<3) c.bad("#fName");
+  if(!/^0[5-7]\d{8}$/.test(normPhone($("#phone").value))) c.bad("#fPhone");
+  if(!$("#city").value) c.bad("#fCity");
+  if($("#city").value==="__other" && !$("#cityOther").value.trim()) c.bad("#fCityOther");
+  if($("#address").value.trim().length<5) c.bad("#fAddr");
+  return c.done();
+}
+function goStep(n){
+  const f=$("#orderForm");
+  $("#pane1").hidden = n!==1; $("#pane2").hidden = n!==2;
+  f.classList.toggle("s2", n===2);
+  $("#ps1").className = "ps " + (n===1 ? "on" : "done");
+  $("#ps2").className = "ps " + (n===2 ? "on" : "");
+  if(n===2){
+    const a=nAr.value.trim(), l=nLat.value.trim();
+    $("#miniName").innerHTML = [a?`<span class="ar">${esc(a)}</span>`:"", l?`<span class="lat">${esc(l)}</span>`:""].filter(Boolean).join(" · ");
+  }
+  const top = f.getBoundingClientRect().top + window.scrollY - 80;
+  window.scrollTo({top, behavior:"smooth"});
+  if(n===2) setTimeout(()=>{ if(!$("#fullName").value) $("#fullName").focus({preventScroll:true}); }, 350);
+}
+$("#toStep2").onclick=()=>{ if(validate1()) goStep(2); };
+$("#editStep1").onclick=()=>goStep(1);
+$("#backStep1").onclick=()=>goStep(1);
 function orderId(){
   const d=new Date(), p=n=>String(n).padStart(2,"0");
   return "TZ-"+String(d.getFullYear()).slice(2)+p(d.getMonth()+1)+p(d.getDate())+"-"+Math.random().toString(36).slice(2,6).toUpperCase();
@@ -533,7 +596,8 @@ if(C.WHATSAPP){ $$(".js-wa").forEach(a=>{ a.style.display="flex"; if(!a.href) a.
 $("#orderForm").addEventListener("submit", async e=>{
   e.preventDefault();
   if(e.target.website.value) return;
-  if(!validate()) return;
+  if(!validate1()){ goStep(1); return; }
+  if(!validate2()) return;
   const card = $("#msgs input:checked").value;
   const cardText = card==="custom" ? $("#customMsg").value.trim() : (card==="none" ? t("noCard") : card);
   const city = $("#city").value==="__other" ? $("#cityOther").value.trim() : $("#city").value;
@@ -562,7 +626,7 @@ $("#orderForm").addEventListener("submit", async e=>{
   if(C.WHATSAPP){ $("#waConfirm").href=waLink(waTxt); $("#waConfirm").style.display="flex"; }
   $("#modal").classList.add("open");
   try{ if(window.fbq) fbq("track","Purchase",{value:total,currency:"MAD"}); if(window.ttq) ttq.track("CompletePayment",{value:total,currency:"MAD"}); }catch(x){}
-  if(sent){ e.target.reset(); qty=1; updateTotals(); preview(); $("#fCustom").style.display="none"; $$("#msgs .msg").forEach((m,i)=>m.classList.toggle("on",i===0)); }
+  if(sent){ e.target.reset(); qty=1; updateTotals(); preview(); syncCard(); $("#note").style.display="none"; $("#addNote").style.display=""; $("#fCityOther").style.display="none"; $("#pane1").hidden=false; $("#pane2").hidden=true; e.target.classList.remove("s2"); $("#ps1").className="ps on"; $("#ps2").className="ps"; }
   else if(C.WHATSAPP){ window.open(waLink(waTxt),"_blank"); }
 });
 function esc(s){ return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
