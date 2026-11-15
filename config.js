@@ -14,7 +14,7 @@ window.TARZIFT_CONFIG = {
   DELIVERY_FEE: 0,
 
   // Facebook Pixel ID (optional)
-  FB_PIXEL_ID: "",
+  FB_PIXEL_ID: "29064272979931768",
 
   // TikTok Pixel ID (optional)
   TIKTOK_PIXEL_ID: ""

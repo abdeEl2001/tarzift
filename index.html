@@ -563,7 +563,8 @@ function goStep(n){
   window.scrollTo({top, behavior:"smooth"});
   if(n===2) setTimeout(()=>{ if(!$("#fullName").value) $("#fullName").focus({preventScroll:true}); }, 350);
 }
-$("#toStep2").onclick=()=>{ if(validate1()) goStep(2); };
+let icSent=false;
+$("#toStep2").onclick=()=>{ if(validate1()){ goStep(2); if(!icSent){ icSent=true; try{ if(window.fbq) fbq("track","InitiateCheckout",{value:C.PRICE*qty,currency:"MAD",num_items:qty}); }catch(x){} } } };
 $("#editStep1").onclick=()=>goStep(1);
 $("#backStep1").onclick=()=>goStep(1);
 function orderId(){
@@ -590,13 +591,17 @@ $("#orderForm").addEventListener("submit", async e=>{
     language: lang, page: location.href, website: ""
   };
   const btn=$("#submitBtn"); btn.disabled=true; btn.textContent=t("sending");
-  let sent=false;
-  try{
-    if(C.SHEET_URL){
-      await fetch(C.SHEET_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:new URLSearchParams(data).toString()});
-      sent=true;
+  let sent=false, confirmed=false;
+  const body=new URLSearchParams(data).toString();
+  if(C.SHEET_URL){
+    try{
+      const r=await fetch(C.SHEET_URL,{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body});
+      const j=await r.json();
+      if(j && j.ok){ sent=true; confirmed=true; }
+    }catch(err){
+      try{ await fetch(C.SHEET_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"application/x-www-form-urlencoded"},body}); sent=true; }catch(e2){ console.error(e2); }
     }
-  }catch(err){ console.error(err); }
+  }
   btn.disabled=false; btn.textContent=t("submit");
   if(!sent && !C.WHATSAPP){ alert(t("errSend")); return; }
 
@@ -605,7 +610,7 @@ $("#orderForm").addEventListener("submit", async e=>{
   const waTxt = `${t("waHello")}\n${t("rOrder")}: ${data.order_id}\n${t("rNames")}: ${names}\n${t("lName")}: ${data.customer_name}\n${t("lPhone")}: ${data.phone}\n${t("lAddr")}: ${data.address}\n${t("lQty")}: ${qty}\n${t("rTotal")}: ${total} ${t("dh")}`;
   if(C.WHATSAPP){ $("#waConfirm").href=waLink(waTxt); $("#waConfirm").style.display="flex"; }
   $("#modal").classList.add("open");
-  try{ if(window.fbq) fbq("track","Purchase",{value:total,currency:"MAD"}); if(window.ttq) ttq.track("CompletePayment",{value:total,currency:"MAD"}); }catch(x){}
+  if(confirmed){ try{ if(window.fbq) fbq("track","Purchase",{value:total,currency:"MAD",content_name:"Coffret homme personnalisé",content_type:"product",num_items:qty},{eventID:data.order_id}); if(window.ttq) ttq.track("CompletePayment",{value:total,currency:"MAD"}); }catch(x){} }
   if(sent){ e.target.reset(); qty=1; updateTotals(); preview(); syncCard(); $("#note").style.display="none"; $("#addNote").style.display=""; $("#pane1").hidden=false; $("#pane2").hidden=true; e.target.classList.remove("s2"); $("#ps1").className="ps on"; $("#ps2").className="ps"; }
   else if(C.WHATSAPP){ window.open(waLink(waTxt),"_blank"); }
 });
@@ -619,7 +624,7 @@ new IntersectionObserver(es=>es.forEach(en=>st.classList.toggle("hide",en.isInte
 $("#orderForm").addEventListener("focusin",()=>{});
 
 /* pixels */
-if(C.FB_PIXEL_ID){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init',C.FB_PIXEL_ID);fbq('track','PageView');}
+if(C.FB_PIXEL_ID){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init',C.FB_PIXEL_ID);fbq('track','PageView');fbq('track','ViewContent',{content_name:'Coffret homme personnalisé',content_type:'product',value:C.PRICE,currency:'MAD'});}
 if(C.TIKTOK_PIXEL_ID){!function(w,d,t){w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"];ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.load=function(e){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{};ttq._i[e]=[];ttq._i[e]._u=i;var o=d.createElement("script");o.type="text/javascript";o.async=!0;o.src=i+"?sdkid="+e+"&lib="+t;var a=d.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};ttq.load(C.TIKTOK_PIXEL_ID);ttq.page();}(window,document,"ttq");}
 
 $("#yr").textContent=new Date().getFullYear();
