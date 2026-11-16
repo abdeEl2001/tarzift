@@ -10,6 +10,7 @@ window.TARZIFT_CONFIG = {
   // Price of one box in dirhams
   PRICE: 179,
   SCARF_PRICE: 149,
+  SCARF_PAIR_PRICE: 219, // offer: 2 scarves
 
   // Delivery fee in dirhams (0 = free delivery)
   DELIVERY_FEE: 0,
