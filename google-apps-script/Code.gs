@@ -7,12 +7,12 @@ const SHEET_NAME = 'Orders';
 const HEADERS = [
   'Date', 'Order ID', 'Status', 'Customer name', 'Phone', 'City', 'Address',
   'Name (Arabic)', 'Name (Latin)', 'Card message', 'Quantity', 'Unit price',
-  'Delivery fee', 'Total (DH)', 'Note', 'Language', 'Page'
+  'Delivery fee', 'Total (DH)', 'Note', 'Language', 'Page', 'Product', 'Color'
 ];
 const FIELDS = [
   null, 'order_id', null, 'customer_name', 'phone', 'city', 'address',
   'engrave_ar', 'engrave_latin', 'card_message', 'quantity', 'unit_price',
-  'delivery_fee', 'total', 'note', 'language', 'page'
+  'delivery_fee', 'total', 'note', 'language', 'page', 'product', 'color'
 ];
 const STATUSES = ['New', 'Confirmed', 'In production', 'Shipped', 'Delivered', 'Returned', 'Cancelled'];
 

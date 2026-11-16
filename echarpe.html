@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>إيشارب Mikassa | Tarzift تارزيفت</title>
+<meta name="description" content="إيشارب Mikassa أنيق بالكحل ولا الأحمر — 149 درهم، التوصيل داخل فالثمن، الدفع عند الاستلام في جميع مدن المغرب.">
+<meta name="theme-color" content="#FAF6EF">
+<meta property="og:title" content="إيشارب Mikassa | Tarzift">
+<meta property="og:description" content="149 درهم، التوصيل داخل فالثمن، الدفع عند الاستلام.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23FAF6EF'/><text x='32' y='45' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%23B8913A'>T</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Playfair+Display:wght@400;500;600&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="/config.js"></script>
+<style>
+:root{
+  --ivory:#FAF6EF;--white:#FFFFFF;--gold:#B8913A;--gold-dark:#9A7628;--gold-soft:#E2C277;
+  --champagne:#EFE3C8;--line:#E6DAC0;--espresso:#2B211A;--muted:#7A6D60;--walnut:#8A5A34;--leather:#5B3420;
+  --radius:14px;--wa:#25D366;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:'Tajawal',system-ui,sans-serif;background:var(--ivory);color:var(--espresso);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased;padding-bottom:84px}
+html[lang=fr] body{font-family:'Tajawal',system-ui,sans-serif}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+h1,h2,h3{font-family:'Amiri',serif;font-weight:700;line-height:1.3}
+html[lang=fr] h1,html[lang=fr] h2,html[lang=fr] h3{font-family:'Playfair Display',serif;font-weight:500}
+.eyebrow{font-size:13px;letter-spacing:.12em;color:var(--walnut);text-transform:uppercase;font-weight:500}
+html[lang=ar] .eyebrow{letter-spacing:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--gold);color:#fff;border:0;border-radius:12px;padding:15px 26px;font:inherit;font-weight:700;font-size:17px;cursor:pointer;text-decoration:none;transition:background .2s,transform .1s}
+.btn:hover{background:var(--gold-dark)}
+.btn:active{transform:scale(.98)}
+.btn-ghost{background:transparent;color:var(--espresso);border:1.5px solid var(--line)}
+.btn-ghost:hover{background:var(--white)}
+
+/* header */
+header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--champagne)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{text-decoration:none;display:flex;flex-direction:column;align-items:center;line-height:1}
+.logo b{font-family:'Playfair Display',serif;font-weight:500;color:var(--gold);font-size:22px;letter-spacing:.22em}
+.logo small{font-family:'Amiri',serif;font-size:13px;color:var(--espresso);margin-top:3px}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.lang button{background:none;border:0;font:inherit;font-size:14px;padding:6px 14px;cursor:pointer;color:var(--muted)}
+.lang button.on{background:var(--gold);color:#fff}
+
+/* announcement */
+.announce{background:var(--champagne);color:var(--leather);text-align:center;font-size:14px;padding:7px 12px;font-weight:500}
+
+/* hero */
+.hero{padding:28px 0 36px}
+.hero .wrap{display:grid;grid-template-columns:1fr;gap:26px;align-items:center}
+.hero-media{position:relative;border-radius:22px;overflow:hidden;background:var(--champagne);aspect-ratio:4/5;max-height:min(62vh,560px);width:100%;margin:0 auto;border:6px solid var(--white);box-shadow:0 14px 40px -18px rgba(91,52,32,.35)}
+.hero-media video,.hero-media img{width:100%;height:100%;object-fit:cover}
+.hero-badge{position:absolute;top:14px;inset-inline-start:14px;background:var(--white);color:var(--leather);border-radius:999px;padding:5px 12px;font-size:13px;font-weight:700}
+.hero h1{font-size:clamp(30px,6.5vw,48px);margin:6px 0 10px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p.lead{color:var(--muted);font-size:17px;max-width:520px}
+.price-row{display:flex;align-items:baseline;gap:12px;margin:18px 0 20px}
+.price{font-size:38px;font-weight:700;color:var(--gold)}
+.price small{font-size:18px;font-weight:500}
+.cod{background:var(--white);border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:13px;color:var(--leather);font-weight:500}
+.hero-cta{display:flex;flex-wrap:wrap;gap:10px}
+.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}
+.trust div{background:var(--white);border:1px solid var(--champagne);border-radius:12px;padding:10px 8px;text-align:center;font-size:13px;line-height:1.4;color:var(--leather)}
+.trust svg{width:22px;height:22px;margin:0 auto 4px;color:var(--gold)}
+
+section{padding:46px 0}
+.sec-head{text-align:center;max-width:620px;margin:0 auto 26px}
+.sec-head h2{font-size:clamp(26px,5vw,36px);margin-top:4px}
+.sec-head p{color:var(--muted);margin-top:6px}
+.bg-white{background:var(--white)}
+
+/* inside the box */
+.items{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.item{background:var(--ivory);border:1px solid var(--champagne);border-radius:var(--radius);overflow:hidden}
+.item img{aspect-ratio:1/1;object-fit:cover;width:100%}
+.item div{padding:12px 14px 14px}
+.item h3{font-size:19px}
+.item p{font-size:14px;color:var(--muted);line-height:1.5}
+
+/* gallery */
+.gallery{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;-webkit-overflow-scrolling:touch}
+.gallery img{flex:0 0 62%;max-width:300px;aspect-ratio:3/4;object-fit:cover;border-radius:16px;scroll-snap-align:start;border:4px solid var(--white)}
+
+/* occasions */
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.chips span{background:var(--white);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:15px;color:var(--leather)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:1fr;gap:12px;max-width:760px;margin:0 auto}
+.step{display:flex;gap:14px;align-items:flex-start;background:var(--ivory);border:1px solid var(--champagne);border-radius:var(--radius);padding:14px 16px}
+.step b{flex:0 0 36px;height:36px;border-radius:50%;background:var(--gold);color:#fff;display:flex;align-items:center;justify-content:center;font-size:17px}
+.step h3{font-size:18px}
+.step p{font-size:14px;color:var(--muted)}
+
+/* order */
+.order{display:grid;grid-template-columns:1fr;gap:22px;align-items:start}
+.preview{background:var(--white);border:1px solid var(--champagne);border-radius:22px;padding:16px}
+.leather{background:var(--leather);background-image:radial-gradient(circle at 30% 20%,rgba(255,255,255,.07),transparent 60%),radial-gradient(circle at 80% 90%,rgba(0,0,0,.18),transparent 55%);border-radius:14px;padding:26px 16px;text-align:center;border:2px dashed rgba(226,194,119,.35);outline:6px solid var(--leather);margin:6px;min-height:190px;display:flex;flex-direction:column;justify-content:center;gap:4px}
+.leather .ar{font-family:'Aref Ruqaa',serif;color:var(--gold-soft);font-size:42px;line-height:1.25;min-height:52px}
+.leather .lat{font-family:'Great Vibes',cursive;color:var(--gold-soft);font-size:46px;line-height:1.15;min-height:52px}
+.leather .orn{color:var(--gold-soft);opacity:.75;font-size:14px;letter-spacing:6px}
+.preview-note{font-size:13px;color:var(--muted);text-align:center;margin-top:10px}
+.preview-items{display:flex;gap:8px;margin-top:12px}
+.preview-items div{flex:1;background:var(--ivory);border:1px solid var(--champagne);border-radius:10px;padding:8px;text-align:center;font-size:12px;color:var(--leather);line-height:1.35}
+.preview-items .tag{display:block;font-size:15px;margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.preview-items .tag.ar{font-family:'Aref Ruqaa',serif}
+.preview-items .tag.lat{font-family:'Great Vibes',cursive;font-size:18px}
+
+form{background:var(--white);border:1px solid var(--champagne);border-radius:24px;padding:20px 18px 22px;box-shadow:0 18px 40px -28px rgba(91,52,32,.45)}
+.progress{display:flex;align-items:center;gap:10px;margin-bottom:20px}
+.ps{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:14px;font-weight:500;white-space:nowrap}
+.ps b{width:30px;height:30px;border-radius:50%;border:1.5px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:14px;background:#fff;transition:all .25s}
+.ps.on{color:var(--espresso)}
+.ps.on b{background:var(--gold);border-color:var(--gold);color:#fff}
+.ps.done b{background:var(--champagne);border-color:var(--champagne);color:var(--leather)}
+.pline{flex:1;height:3px;background:var(--champagne);border-radius:3px;overflow:hidden}
+.pline i{display:block;height:100%;width:0;background:var(--gold);transition:width .4s}
+form.s2 .pline i{width:100%}
+.pane[hidden]{display:none}
+.pane{animation:paneIn .35s ease}
+@keyframes paneIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.field{margin-bottom:16px}
+label,.lbl{display:block;font-size:14.5px;font-weight:700;margin-bottom:7px;color:var(--espresso)}
+.ig{position:relative}
+.ig+.ig{margin-top:8px}
+.ico{position:absolute;inset-inline-start:13px;top:50%;transform:translateY(-50%);width:20px;height:20px;color:var(--walnut);opacity:.65;pointer-events:none;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;font-family:'Tajawal',sans-serif}
+.ico svg{width:19px;height:19px}
+input,select,textarea{width:100%;font:inherit;font-size:16px;color:var(--espresso);background:#FDFBF7;border:1.5px solid #EDE3D0;border-radius:13px;padding:0 14px;height:52px;outline:none;transition:border .15s,background .15s,box-shadow .15s}
+html[dir=rtl] .ig input,html[dir=rtl] .ig select{padding-right:44px;padding-left:14px}
+html[dir=rtl] .ig select{padding-left:40px}
+html[dir=ltr] .ig input,html[dir=ltr] .ig select{padding-left:44px;padding-right:14px}
+html[dir=ltr] .ig select{padding-right:40px}
+textarea{height:auto;min-height:76px;padding:12px 14px;resize:vertical}
+input::placeholder,textarea::placeholder{color:#B3A797}
+input:focus,select:focus,textarea:focus{border-color:var(--gold);background:#fff;box-shadow:0 0 0 4px rgba(184,145,58,.13)}
+select{appearance:none;-webkit-appearance:none;padding-inline-end:40px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238A5A34' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:18px;background-position:left 14px center}
+html[dir=ltr] select{background-position:right 14px center}
+input.ar-name{font-family:'Aref Ruqaa',serif;font-size:21px}
+input.lat-name{direction:ltr;text-align:left}
+input[type=tel]{direction:ltr;text-align:right;letter-spacing:.5px}
+html[lang=fr] input[type=tel]{text-align:left}
+.hint{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+.err{display:none;color:#B3261E;font-size:13px;margin-top:5px}
+.field.bad input,.field.bad select,.field.bad textarea{border-color:#D9534F;background:#FFF7F6}
+.field.bad .err{display:block}
+.field.bad .hint{display:none}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;background:var(--ivory);border:1px solid var(--champagne);border-radius:13px;padding:4px}
+.seg label{margin:0;font-weight:500;font-size:14px;text-align:center;padding:10px 4px;border-radius:10px;cursor:pointer;color:var(--muted);transition:all .2s;position:relative}
+.seg input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.seg label.on{background:#fff;color:var(--espresso);font-weight:700;box-shadow:0 1px 4px rgba(43,33,26,.12)}
+.card-pv{margin-top:10px;background:var(--ivory);border:1px dashed var(--line);border-radius:13px;padding:14px;text-align:center;font-family:'Amiri',serif;font-size:19px;color:var(--leather);line-height:1.5}
+#fCustom{margin-top:10px;margin-bottom:0}
+.mini{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--ivory);border:1px solid var(--champagne);border-radius:13px;padding:10px 14px;margin-bottom:18px;font-size:14px;color:var(--muted)}
+.mini strong{color:var(--espresso);font-size:17px;margin-inline-start:6px}
+.mini strong .ar{font-family:'Aref Ruqaa',serif}
+.mini strong .lat{font-family:'Great Vibes',cursive;font-size:21px;font-weight:400}
+.linkbtn{background:none;border:0;color:var(--gold-dark);font:inherit;font-size:14px;font-weight:700;cursor:pointer;padding:4px 0;text-decoration:underline;text-underline-offset:4px}
+.two{display:grid;grid-template-columns:1fr;gap:0}
+.summary{background:var(--ivory);border-radius:14px;padding:14px 16px;margin:6px 0 16px;font-size:15px}
+.summary .row{display:flex;justify-content:space-between;align-items:center;min-height:30px}
+.summary .total{font-weight:700;font-size:20px;color:var(--espresso);border-top:1px solid var(--champagne);margin-top:8px;padding-top:10px}
+.summary .total span:last-child{color:var(--gold)}
+.qty{display:flex;align-items:center;border:1.5px solid var(--line);border-radius:999px;overflow:hidden;background:#fff}
+.qty button{background:none;border:0;width:34px;height:32px;font-size:19px;cursor:pointer;color:var(--leather);line-height:1}
+.qty output{min-width:26px;text-align:center;font-weight:700;font-size:16px}
+.free{color:#2E7D4F;font-weight:700}
+.btn.next,.submit{width:100%;font-size:18px;padding:16px;border-radius:14px}
+.submit[disabled]{opacity:.7;cursor:wait}
+.form-note{display:flex;align-items:center;justify-content:center;gap:6px;text-align:center;font-size:13px;color:var(--muted);margin-top:12px}
+.form-note svg{width:16px;height:16px;flex:0 0 16px;color:var(--gold)}
+.back{display:block;margin:12px auto 0;color:var(--muted)}
+.hp{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden;clip:rect(0 0 0 0);pointer-events:none}
+
+/* faq */
+.faq{max-width:760px;margin:0 auto;display:grid;gap:10px}
+details{background:var(--white);border:1px solid var(--champagne);border-radius:12px;padding:14px 16px}
+summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:10px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--gold);font-size:22px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);margin-top:8px;font-size:15px}
+
+footer{background:var(--white);border-top:1px solid var(--champagne);padding:30px 0 20px;text-align:center;font-size:14px;color:var(--muted)}
+footer .logo{margin-bottom:10px}
+
+/* sticky bar */
+.sticky{position:fixed;bottom:0;left:0;right:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-top:1px solid var(--champagne);padding:10px 14px calc(10px + env(safe-area-inset-bottom));display:flex;gap:10px;align-items:center;transition:transform .25s}
+.sticky.hide{transform:translateY(110%)}
+.sticky .p{display:flex;flex-direction:column;line-height:1.15}
+.sticky .p b{color:var(--gold);font-size:20px}
+.sticky .p small{color:var(--muted);font-size:12px}
+.sticky .btn{flex:1;padding:13px 16px}
+.wa{background:var(--wa);color:#fff;width:50px;height:50px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex:0 0 50px}
+.wa svg{width:26px;height:26px}
+
+/* modal */
+.modal{position:fixed;inset:0;z-index:60;background:rgba(43,33,26,.55);display:none;align-items:center;justify-content:center;padding:18px}
+.modal.open{display:flex}
+.modal-card{background:var(--white);border-radius:22px;max-width:440px;width:100%;padding:26px 22px;text-align:center;max-height:90vh;overflow:auto}
+.check{width:64px;height:64px;border-radius:50%;background:var(--champagne);color:var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
+.check svg{width:34px;height:34px}
+.modal-card h3{font-size:26px}
+.modal-card p{color:var(--muted)}
+.recap{background:var(--ivory);border-radius:12px;padding:12px 14px;margin:14px 0;text-align:start;font-size:14px;line-height:1.8}
+.recap b{color:var(--espresso)}
+.modal-card .btn{width:100%;margin-top:8px}
+
+@media (min-width:760px){
+  body{padding-bottom:0}
+  .hero .wrap{grid-template-columns:1fr 1fr;gap:48px}
+  .hero-media{order:2}
+  .items{grid-template-columns:repeat(4,1fr)}
+  .gallery img{flex:0 0 260px}
+  .order{grid-template-columns:1fr 1.15fr;gap:30px}
+  .preview{position:sticky;top:76px}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .sticky{display:none}
+}
+/* scarf page */
+.pv-scarf{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:4/5;max-height:min(62vh,560px);width:100%;margin:0 auto;border:6px solid var(--white);box-shadow:0 14px 40px -18px rgba(91,52,32,.35);background:linear-gradient(160deg,#F3EADB,#E9DCC4)}
+.pv-scarf img{width:100%;height:100%;object-fit:cover}
+.pv-scarf svg{position:absolute;inset:0;width:100%;height:100%}
+.ph-tag{position:absolute;bottom:12px;inset-inline-end:12px;background:rgba(255,255,255,.9);color:var(--muted);font-size:11px;border-radius:999px;padding:3px 10px}
+.colors{display:flex;gap:10px}
+.colors label{flex:1;display:flex;align-items:center;gap:10px;margin:0;border:1.5px solid var(--line);border-radius:13px;padding:11px 14px;cursor:pointer;background:#FDFBF7;font-weight:500;transition:all .15s}
+.colors label.on{border-color:var(--gold);background:#fff;box-shadow:0 0 0 4px rgba(184,145,58,.13);font-weight:700}
+.colors input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.sw{width:24px;height:24px;border-radius:50%;flex:0 0 24px;border:2px solid #fff;box-shadow:0 0 0 1px var(--line)}
+.feat{display:grid;gap:10px;max-width:760px;margin:0 auto}
+.feat div{display:flex;gap:12px;align-items:flex-start;background:var(--ivory);border:1px solid var(--champagne);border-radius:var(--radius);padding:14px 16px}
+.feat b{color:var(--gold);font-size:18px;line-height:1.5}
+.xsell{display:flex;gap:14px;align-items:center;background:var(--white);border:1px solid var(--champagne);border-radius:18px;padding:12px;text-decoration:none;max-width:560px;margin:0 auto}
+.xsell img{width:96px;height:96px;object-fit:cover;border-radius:12px;flex:0 0 96px}
+.xsell h3{font-size:19px}
+.xsell p{font-size:14px;color:var(--muted);line-height:1.5}
+.xsell .go{color:var(--gold-dark);font-weight:700;font-size:14px}
+@media (min-width:760px){ .pv-scarf{order:2} .feat{grid-template-columns:repeat(2,1fr)} }
+</style>
+</head>
+<body>
+
+<div class="announce" data-i18n="announce"></div>
+
+<header>
+  <div class="wrap">
+    <a href="/" class="logo" aria-label="Tarzift"><b>TARZIFT</b><small>تارزيفت</small></a>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="ar" class="on">ع</button>
+      <button type="button" data-lang="fr">FR</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div class="pv-scarf" id="pvScarf">
+      <!-- Placeholder illustration until real photos are added (assets/scarf-*.webp) -->
+      <svg viewBox="0 0 400 500" aria-hidden="true">
+        <defs><linearGradient id="sg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--sc1)"/><stop offset="1" stop-color="var(--sc2)"/></linearGradient></defs>
+        <path d="M120 40c40 30 120 30 160 0l-10 70c-30 40-110 40-140 0z" fill="url(#sg)"/>
+        <path d="M135 105c-20 90-10 210 10 330l60 20c-10-120-15-240-5-340z" fill="url(#sg)"/>
+        <path d="M265 105c20 90 10 200-15 310l-55 25c15-110 18-230 10-330z" fill="url(#sg)" opacity=".9"/>
+        <g stroke="rgba(255,255,255,.18)" stroke-width="3" fill="none"><path d="M150 140c5 90 10 190 25 290"/><path d="M245 140c-3 90-8 180-20 270"/></g>
+        <g stroke="var(--sc1)" stroke-width="4" stroke-linecap="round"><path d="M150 438v24M162 441v24M174 444v24M186 447v24M198 450v22"/><path d="M200 438v24M212 434v24M224 430v24M236 426v24M248 420v22"/></g>
+      </svg>
+      <span class="hero-badge" data-i18n="badge"></span>
+      <span class="ph-tag" id="phTag" data-i18n="phTag"></span>
+    </div>
+    <div>
+      <span class="eyebrow" data-i18n="eyebrow"></span>
+      <h1 data-i18n-html="h1"></h1>
+      <p class="lead" data-i18n="lead"></p>
+      <div class="price-row">
+        <span class="price"><span class="js-price"></span> <small data-i18n="dh"></small></span>
+        <span class="cod" data-i18n="cod"></span>
+      </div>
+      <div class="hero-cta">
+        <a href="#order" class="btn" data-i18n="cta"></a>
+      </div>
+      <div class="trust">
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg><span data-i18n="t1"></span></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/></svg><span data-i18n="t2"></span></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg><span data-i18n="t3"></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-white">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow" data-i18n="whyEyebrow"></span><h2 data-i18n="whyTitle"></h2></div>
+    <div class="feat">
+      <div><b>✦</b><p data-i18n="w1"></p></div>
+      <div><b>✦</b><p data-i18n="w2"></p></div>
+      <div><b>✦</b><p data-i18n="w3"></p></div>
+      <div><b>✦</b><p data-i18n="w4"></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="order">
+  <div class="wrap" style="max-width:560px">
+    <div class="sec-head"><span class="eyebrow" data-i18n="ordEyebrow"></span><h2 data-i18n="ordTitle"></h2></div>
+    <form id="orderForm" novalidate>
+      <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="field">
+        <span class="lbl" data-i18n="fColor"></span>
+        <div class="colors" id="colors" role="radiogroup">
+          <label class="on"><input type="radio" name="color" value="Noir" checked><span class="sw" style="background:#1d1b1a"></span><span data-i18n="cBlack"></span></label>
+          <label><input type="radio" name="color" value="Rouge"><span class="sw" style="background:#9E1B23"></span><span data-i18n="cRed"></span></label>
+        </div>
+      </div>
+      <div class="field" id="fName">
+        <label for="fullName" data-i18n="lName"></label>
+        <div class="ig"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></span><input id="fullName" name="customer_name" autocomplete="name" maxlength="60" data-i18n-ph="phName"></div>
+        <span class="err" data-i18n="eName"></span>
+      </div>
+      <div class="field" id="fPhone">
+        <label for="phone" data-i18n="lPhone"></label>
+        <div class="ig"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="06 00 00 00 00" maxlength="16"></div>
+        <span class="err" data-i18n="ePhone"></span>
+      </div>
+      <div class="field" id="fAddr">
+        <label for="address" data-i18n="lAddr"></label>
+        <div class="ig"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 11l8-7 8 7v9a1 1 0 0 1-1 1h-5v-6h-4v6H5a1 1 0 0 1-1-1z"/></svg></span><input id="address" name="address" autocomplete="street-address" maxlength="160" data-i18n-ph="phAddr"></div>
+        <span class="err" data-i18n="eAddr"></span>
+      </div>
+      <div class="field" style="margin-top:-4px">
+        <button type="button" class="linkbtn" id="addNote" data-i18n="addNote"></button>
+        <textarea id="note" name="note" maxlength="200" data-i18n-ph="phNote" style="display:none;margin-top:8px"></textarea>
+      </div>
+      <div class="summary">
+        <div class="row"><span><span data-i18n="sumItem"></span> · <span id="sColor"></span></span><div class="qty"><button type="button" id="qMinus" aria-label="-">−</button><output id="qty">1</output><button type="button" id="qPlus" aria-label="+">+</button></div></div>
+        <div class="row"><span data-i18n="sumShip"></span><span class="free" data-i18n="free"></span></div>
+        <div class="row total"><span data-i18n="sumTotal"></span><span><span id="sTotal"></span> <span data-i18n="dh"></span></span></div>
+      </div>
+      <button type="submit" class="btn submit" id="submitBtn" data-i18n="submit"></button>
+      <p class="form-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span data-i18n="formNote"></span></p>
+    </form>
+  </div>
+</section>
+
+<section class="bg-white">
+  <div class="wrap">
+    <div class="sec-head"><h2 data-i18n="faqTitle"></h2></div>
+    <div class="faq">
+      <details><summary data-i18n="q1"></summary><p data-i18n="a1"></p></details>
+      <details><summary data-i18n="q2"></summary><p data-i18n="a2"></p></details>
+      <details><summary data-i18n="q3"></summary><p data-i18n="a3"></p></details>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow" data-i18n="xEyebrow"></span></div>
+    <a class="xsell" href="/"><img src="/assets/full.webp" alt=""><div><h3 data-i18n="xTitle"></h3><p data-i18n="xSub"></p><span class="go" data-i18n="xGo"></span></div></a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="logo" style="display:inline-flex"><b>TARZIFT</b><small>تارزيفت</small></div>
+    <p data-i18n="footer"></p>
+    <p style="margin-top:6px">© <span id="yr"></span> Tarzift</p>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky">
+  <div class="p"><b><span class="js-price"></span> <span data-i18n="dh"></span></b><small data-i18n="cod"></small></div>
+  <a href="#order" class="btn" data-i18n="cta"></a>
+</div>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="modal-card">
+    <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+    <h3 id="mTitle" data-i18n="thanks"></h3>
+    <p data-i18n="thanksSub"></p>
+    <div class="recap" id="recap"></div>
+    <a class="btn js-wa" id="waConfirm" target="_blank" rel="noopener" style="display:none;background:var(--wa)" data-i18n="waConfirm"></a>
+    <button type="button" class="btn btn-ghost" id="closeModal" data-i18n="close"></button>
+  </div>
+</div>
+
+<script>
+(function(){
+const C = Object.assign({SHEET_URL:"",WHATSAPP:"",SCARF_PRICE:149,FB_PIXEL_ID:""}, window.TARZIFT_CONFIG||{});
+const PRICE = Number(C.SCARF_PRICE)||149;
+const PRODUCT = "Écharpe Mikassa";
+const $ = s => document.querySelector(s), $$ = s => document.querySelectorAll(s);
+const COLORS = {Noir:{ar:"كحل",fr:"Noir",c1:"#2a2725",c2:"#0f0e0d",img:"/assets/scarf-noir.webp"}, Rouge:{ar:"أحمر",fr:"Rouge",c1:"#B3242D",c2:"#6E1117",img:"/assets/scarf-rouge.webp"}};
+
+const T = {
+ ar:{announce:"الدفع عند الاستلام · التوصيل لجميع مدن المغرب",badge:"جديد",eyebrow:"إكسسوار أنيق",h1:"إيشارب <em>Mikassa</em>",lead:"إيشارب ناعم بتصميم أنيق وكلاسيكي، كيزيد لمسة شيك لأي لبسة. ساهل تنسقيه مع الستايل ديالك كل نهار، وهدية زوينة لمن تحب.",dh:"درهم",cod:"الدفع عند الاستلام",cta:"اطلبي الآن",t1:"التوصيل داخل فالثمن",t2:"الدفع عند الاستلام",t3:"التوصيل 24 حتال 72 ساعة",phTag:"صورة توضيحية",whyEyebrow:"علاش غادي يعجبك",whyTitle:"شيك، ساهل، كل نهار",w1:"تصميم أنيق وكلاسيكي ما كيتقاداش مع الوقت.",w2:"متوفر بلونين: الكحل والأحمر.",w3:"كيتنسق مع اللبسة الكلاسيكية والكاجوال.",w4:"هدية مثالية للزوجة، الأم ولا الأخت.",ordEyebrow:"اطلبي دابا",ordTitle:"اختاري اللون وكملي الطلب",fColor:"اللون",cBlack:"كحل",cRed:"أحمر",lName:"الإسم الكامل",phName:"الإسم والنسب",eName:"دخلي الإسم الكامل",lPhone:"رقم الهاتف",ePhone:"دخلي رقم هاتف مغربي صحيح",lAddr:"المدينة والعنوان",phAddr:"المدينة، الحي، الزنقة، رقم الدار",eAddr:"دخلي المدينة والعنوان كامل",addNote:"+ زيدي ملاحظة",phNote:"مثلاً: وقت التوصيل…",sumItem:"الإيشارب",sumShip:"التوصيل",free:"داخل فالثمن",sumTotal:"المجموع",submit:"أكدي الطلب — الدفع عند الاستلام",sending:"جاري الإرسال…",formNote:"ما كتخلصي حتى يوصلك الطلب. غادي نتصلو بيك باش نأكدو.",faqTitle:"أسئلة متكررة",q1:"كيفاش كنخلص؟",a1:"الدفع عند الاستلام، نقداً للموزع ملي يوصلك الطلب.",q2:"شحال كياخد التوصيل؟",a2:"بين 24 و72 ساعة حسب المدينة، والتوصيل داخل فالثمن.",q3:"واش نقدر نطلب جوج ألوان؟",a3:"إيه، زيدي الكمية وكتبي فالملاحظة شحال من واحد بكل لون، وغادي نأكدوها معاك فالتيليفون.",xEyebrow:"حتى هادي غادي تعجبك",xTitle:"بوكس هدية بإسم من تحب",xSub:"محفظة، قلم وسلسلة منقوشين بالإسم في علبة خشبية — 179 درهم.",xGo:"شوفي البوكس ←",footer:"هدايا وإكسسوارات · المغرب",thanks:"شكراً! توصلنا بالطلب ديالك",thanksSub:"غادي نتصلو بيك قريب باش نأكدو الطلب.",waConfirm:"أكدي عبر واتساب",close:"إغلاق",rOrder:"رقم الطلب",rColor:"اللون",rQty:"الكمية",rTotal:"المجموع",errSend:"وقع مشكل فالإرسال. عاودي المحاولة.",waHello:"السلام، بغيت نأكد الطلب ديالي"},
+ fr:{announce:"Paiement à la livraison · Livraison partout au Maroc",badge:"Nouveau",eyebrow:"Accessoire chic",h1:"L'écharpe <em>Mikassa</em>",lead:"Une écharpe douce au design élégant et intemporel, qui ajoute une touche chic et raffinée à chaque tenue. Facile à assortir au quotidien, et un joli cadeau.",dh:"DH",cod:"Paiement à la livraison",cta:"Commander",t1:"Livraison incluse",t2:"Paiement à la livraison",t3:"Livrée en 24 à 72 h",phTag:"Illustration",whyEyebrow:"Pourquoi vous allez l'aimer",whyTitle:"Chic, simple, au quotidien",w1:"Un design élégant et intemporel.",w2:"Disponible en noir et en rouge.",w3:"S'accorde aux tenues classiques comme décontractées.",w4:"Le cadeau idéal pour votre femme, mère ou sœur.",ordEyebrow:"Commandez maintenant",ordTitle:"Choisissez la couleur et commandez",fColor:"Couleur",cBlack:"Noir",cRed:"Rouge",lName:"Nom complet",phName:"Prénom et nom",eName:"Entrez votre nom complet",lPhone:"Téléphone",ePhone:"Entrez un numéro marocain valide",lAddr:"Ville et adresse",phAddr:"Ville, quartier, rue, numéro",eAddr:"Entrez la ville et l'adresse complète",addNote:"+ Ajouter une note",phNote:"Ex. : heure de livraison…",sumItem:"Écharpe",sumShip:"Livraison",free:"Incluse dans le prix",sumTotal:"Total",submit:"Confirmer — paiement à la livraison",sending:"Envoi…",formNote:"Vous ne payez qu'à la réception. Nous vous appelons pour confirmer.",faqTitle:"Questions fréquentes",q1:"Comment je paie ?",a1:"Paiement à la livraison, en espèces au livreur.",q2:"Quel délai de livraison ?",a2:"Entre 24 et 72 h selon la ville, livraison incluse dans le prix.",q3:"Puis-je commander les deux couleurs ?",a3:"Oui, augmentez la quantité et précisez les couleurs dans la note ; nous confirmerons par téléphone.",xEyebrow:"Vous aimerez aussi",xTitle:"Le coffret cadeau à son nom",xSub:"Portefeuille, stylo et porte-clés gravés au prénom, en coffret bois — 179 DH.",xGo:"Voir le coffret →",footer:"Cadeaux et accessoires · Maroc",thanks:"Merci ! Commande reçue",thanksSub:"Nous vous appelons très vite pour confirmer.",waConfirm:"Confirmer sur WhatsApp",close:"Fermer",rOrder:"N° de commande",rColor:"Couleur",rQty:"Quantité",rTotal:"Total",errSend:"Erreur d'envoi. Réessayez.",waHello:"Bonjour, je veux confirmer ma commande"}
+};
+let lang="ar";
+try{ const s=localStorage.getItem("tz_lang"); if(s==="fr"||s==="ar") lang=s; }catch(e){}
+const t = k => (T[lang][k]!==undefined ? T[lang][k] : k);
+function applyLang(){
+  document.documentElement.lang=lang; document.documentElement.dir=lang==="ar"?"rtl":"ltr";
+  $$("[data-i18n]").forEach(el=>el.textContent=t(el.dataset.i18n));
+  $$("[data-i18n-html]").forEach(el=>el.innerHTML=t(el.dataset.i18nHtml));
+  $$("[data-i18n-ph]").forEach(el=>el.placeholder=t(el.dataset.i18nPh));
+  $$(".lang button").forEach(b=>b.classList.toggle("on",b.dataset.lang===lang));
+  document.title = lang==="ar" ? "إيشارب Mikassa | Tarzift تارزيفت" : "Écharpe Mikassa | Tarzift";
+  update();
+  try{ localStorage.setItem("tz_lang",lang); }catch(e){}
+}
+$$(".lang button").forEach(b=>b.addEventListener("click",()=>{lang=b.dataset.lang;applyLang();}));
+
+$$(".js-price").forEach(el=>el.textContent=PRICE);
+let qty=1;
+const color=()=>$("#colors input:checked").value;
+function showColor(){
+  const c=COLORS[color()], box=$("#pvScarf");
+  box.style.setProperty("--sc1",c.c1); box.style.setProperty("--sc2",c.c2);
+  // use a real photo if it exists, otherwise keep the illustration
+  let img=box.querySelector("img");
+  const probe=new Image();
+  probe.onload=()=>{ if(!img){ img=document.createElement("img"); img.alt=""; box.prepend(img);} img.src=c.img; box.querySelector("svg").style.display="none"; $("#phTag").style.display="none"; };
+  probe.onerror=()=>{ if(img) img.remove(); box.querySelector("svg").style.display=""; $("#phTag").style.display=""; };
+  probe.src=c.img;
+}
+function update(){
+  $("#qty").textContent=qty; $("#sTotal").textContent=qty*PRICE;
+  $("#sColor").textContent=COLORS[color()][lang];
+}
+$$("#colors input").forEach(r=>r.addEventListener("change",()=>{ $$("#colors label").forEach(l=>l.classList.toggle("on",l.querySelector("input").checked)); showColor(); update(); }));
+$("#qMinus").onclick=()=>{ if(qty>1){qty--;update();} };
+$("#qPlus").onclick=()=>{ if(qty<10){qty++;update();} };
+$("#addNote").onclick=()=>{ $("#addNote").style.display="none"; $("#note").style.display="block"; $("#note").focus(); };
+$$("form input, form textarea").forEach(el=>el.addEventListener("input",()=>{ const f=el.closest(".field"); if(f) f.classList.remove("bad"); }));
+
+function normPhone(p){ let d=p.replace(/[^\d+]/g,""); if(d.startsWith("+212")) d="0"+d.slice(4); else if(d.startsWith("00212")) d="0"+d.slice(5); else if(d.startsWith("212")&&d.length===12) d="0"+d.slice(3); return d; }
+function validate(){
+  let ok=true, first=null; const bad=id=>{ $(id).classList.add("bad"); ok=false; if(!first) first=$(id); };
+  if($("#fullName").value.trim().length<3) bad("#fName");
+  if(!/^0[5-7]\d{8}$/.test(normPhone($("#phone").value))) bad("#fPhone");
+  if($("#address").value.trim().length<8) bad("#fAddr");
+  if(first) first.scrollIntoView({behavior:"smooth",block:"center"});
+  return ok;
+}
+let icSent=false;
+$("#orderForm").addEventListener("focusin",()=>{ if(icSent) return; icSent=true; try{ if(window.fbq) fbq("track","InitiateCheckout",{value:PRICE*qty,currency:"MAD",content_name:PRODUCT,content_ids:["mikassa-scarf"],num_items:qty}); }catch(x){} });
+function orderId(){ const d=new Date(),p=n=>String(n).padStart(2,"0"); return "TZ-"+String(d.getFullYear()).slice(2)+p(d.getMonth()+1)+p(d.getDate())+"-"+Math.random().toString(36).slice(2,6).toUpperCase(); }
+function waLink(text){ return C.WHATSAPP ? `https://wa.me/${C.WHATSAPP}?text=${encodeURIComponent(text)}` : ""; }
+function esc(s){ return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+
+$("#orderForm").addEventListener("submit", async e=>{
+  e.preventDefault();
+  if(e.target.website.value) return;
+  if(!validate()) return;
+  const col=color(), total=qty*PRICE, userNote=$("#note").value.trim();
+  const data = {
+    order_id: orderId(), product: PRODUCT, color: col,
+    engrave_ar: "", engrave_latin: "", card_message: "",
+    customer_name: $("#fullName").value.trim(), phone: normPhone($("#phone").value), city: "", address: $("#address").value.trim(),
+    quantity: qty, unit_price: PRICE, delivery_fee: 0, total,
+    // product + color also in the note so they show in the sheet even before the script is updated
+    note: `[${PRODUCT} – ${col}]` + (userNote ? " " + userNote : ""),
+    language: lang, page: location.href, website: ""
+  };
+  const btn=$("#submitBtn"); btn.disabled=true; btn.textContent=t("sending");
+  let sent=false, confirmed=false; const body=new URLSearchParams(data).toString();
+  if(C.SHEET_URL){
+    try{ const r=await fetch(C.SHEET_URL,{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body}); const j=await r.json(); if(j&&j.ok){sent=true;confirmed=true;} }
+    catch(err){ try{ await fetch(C.SHEET_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"application/x-www-form-urlencoded"},body}); sent=true; }catch(e2){ console.error(e2); } }
+  }
+  btn.disabled=false; btn.textContent=t("submit");
+  if(!sent){ alert(t("errSend")); return; }
+  $("#recap").innerHTML=`<div><b>${t("rOrder")}:</b> ${data.order_id}</div><div><b>${t("rColor")}:</b> ${esc(COLORS[col][lang])}</div><div><b>${t("rQty")}:</b> ${qty}</div><div><b>${t("rTotal")}:</b> ${total} ${t("dh")}</div>`;
+  if(C.WHATSAPP){ $("#waConfirm").href=waLink(`${t("waHello")}\n${t("rOrder")}: ${data.order_id}\n${PRODUCT} – ${col} × ${qty}\n${t("rTotal")}: ${total} ${t("dh")}`); $("#waConfirm").style.display="flex"; }
+  $("#modal").classList.add("open");
+  if(confirmed){ try{ if(window.fbq) fbq("track","Purchase",{value:total,currency:"MAD",content_name:PRODUCT,content_ids:["mikassa-scarf"],content_type:"product",num_items:qty},{eventID:data.order_id}); }catch(x){} }
+  e.target.reset(); qty=1; $$("#colors label").forEach((l,i)=>l.classList.toggle("on",i===0)); showColor(); update(); $("#note").style.display="none"; $("#addNote").style.display="";
+});
+$("#closeModal").onclick=()=>$("#modal").classList.remove("open");
+$("#modal").addEventListener("click",e=>{ if(e.target.id==="modal") $("#modal").classList.remove("open"); });
+const st=$("#sticky"); new IntersectionObserver(es=>es.forEach(en=>st.classList.toggle("hide",en.isIntersecting)),{threshold:0.05}).observe($("#order"));
+
+if(C.FB_PIXEL_ID){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('set','autoConfig',false,C.FB_PIXEL_ID);fbq('init',C.FB_PIXEL_ID);fbq('track','PageView');fbq('track','ViewContent',{content_name:PRODUCT,content_ids:['mikassa-scarf'],content_type:'product',value:PRICE,currency:'MAD'});}
+
+$("#yr").textContent=new Date().getFullYear();
+showColor(); applyLang();
+})();
+</script>
+</body>
+</html>
