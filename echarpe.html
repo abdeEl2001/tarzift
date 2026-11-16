@@ -4,9 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>إيشارب Mikassa | Tarzift تارزيفت</title>
-<meta name="description" content="إيشارب Mikassa أنيق بالكحل ولا الأحمر — 149 درهم، التوصيل داخل فالثمن، الدفع عند الاستلام في جميع مدن المغرب.">
+<meta name="description" content="إيشارب Mikassa أحمر أنيق — 149 درهم، التوصيل داخل فالثمن، الدفع عند الاستلام في جميع مدن المغرب.">
 <meta name="theme-color" content="#FAF6EF">
 <meta property="og:title" content="إيشارب Mikassa | Tarzift">
+<meta property="og:image" content="/assets/scarf-1.webp">
 <meta property="og:description" content="149 درهم، التوصيل داخل فالثمن، الدفع عند الاستلام.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23FAF6EF'/><text x='32' y='45' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%23B8913A'>T</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -221,6 +222,12 @@ footer .logo{margin-bottom:10px}
   .sticky{display:none}
 }
 /* scarf page */
+.pick{display:flex;align-items:center;gap:12px;background:var(--ivory);border:1px solid var(--champagne);border-radius:14px;padding:10px;margin-bottom:18px}
+.pick img{width:62px;height:62px;object-fit:cover;border-radius:10px;flex:0 0 62px}
+.pick div{flex:1;display:flex;flex-direction:column;gap:3px}
+.pick div span{display:flex;align-items:center;gap:6px;font-size:14px;color:var(--muted)}
+.pick .sw{width:16px;height:16px;flex:0 0 16px}
+.pick strong{color:var(--gold);font-size:20px;white-space:nowrap}
 .pv-scarf{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:4/5;max-height:min(62vh,560px);width:100%;margin:0 auto;border:6px solid var(--white);box-shadow:0 14px 40px -18px rgba(91,52,32,.35);background:linear-gradient(160deg,#F3EADB,#E9DCC4)}
 .pv-scarf img{width:100%;height:100%;object-fit:cover}
 .pv-scarf svg{position:absolute;inset:0;width:100%;height:100%}
@@ -259,17 +266,8 @@ footer .logo{margin-bottom:10px}
 <section class="hero">
   <div class="wrap">
     <div class="pv-scarf" id="pvScarf">
-      <!-- Placeholder illustration until real photos are added (assets/scarf-*.webp) -->
-      <svg viewBox="0 0 400 500" aria-hidden="true">
-        <defs><linearGradient id="sg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--sc1)"/><stop offset="1" stop-color="var(--sc2)"/></linearGradient></defs>
-        <path d="M120 40c40 30 120 30 160 0l-10 70c-30 40-110 40-140 0z" fill="url(#sg)"/>
-        <path d="M135 105c-20 90-10 210 10 330l60 20c-10-120-15-240-5-340z" fill="url(#sg)"/>
-        <path d="M265 105c20 90 10 200-15 310l-55 25c15-110 18-230 10-330z" fill="url(#sg)" opacity=".9"/>
-        <g stroke="rgba(255,255,255,.18)" stroke-width="3" fill="none"><path d="M150 140c5 90 10 190 25 290"/><path d="M245 140c-3 90-8 180-20 270"/></g>
-        <g stroke="var(--sc1)" stroke-width="4" stroke-linecap="round"><path d="M150 438v24M162 441v24M174 444v24M186 447v24M198 450v22"/><path d="M200 438v24M212 434v24M224 430v24M236 426v24M248 420v22"/></g>
-      </svg>
+      <img src="/assets/scarf-1.webp" alt="إيشارب Mikassa أحمر" fetchpriority="high">
       <span class="hero-badge" data-i18n="badge"></span>
-      <span class="ph-tag" id="phTag" data-i18n="phTag"></span>
     </div>
     <div>
       <span class="eyebrow" data-i18n="eyebrow"></span>
@@ -303,17 +301,26 @@ footer .logo{margin-bottom:10px}
   </div>
 </section>
 
-<section id="order">
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow" data-i18n="galEyebrow"></span><h2 data-i18n="galTitle"></h2></div>
+    <div class="gallery">
+      <img src="/assets/scarf-1.webp" alt="" loading="lazy">
+      <img src="/assets/scarf-2.webp" alt="" loading="lazy">
+      <img src="/assets/scarf-3.webp" alt="" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section id="order" class="bg-white">
   <div class="wrap" style="max-width:560px">
     <div class="sec-head"><span class="eyebrow" data-i18n="ordEyebrow"></span><h2 data-i18n="ordTitle"></h2></div>
     <form id="orderForm" novalidate>
       <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <div class="field">
-        <span class="lbl" data-i18n="fColor"></span>
-        <div class="colors" id="colors" role="radiogroup">
-          <label class="on"><input type="radio" name="color" value="Noir" checked><span class="sw" style="background:#1d1b1a"></span><span data-i18n="cBlack"></span></label>
-          <label><input type="radio" name="color" value="Rouge"><span class="sw" style="background:#9E1B23"></span><span data-i18n="cRed"></span></label>
-        </div>
+      <div class="pick">
+        <img src="/assets/scarf-1.webp" alt="">
+        <div><b data-i18n="pickName"></b><span><span class="sw" style="background:#8E1620"></span><span data-i18n="cRed"></span></span></div>
+        <strong><span class="js-price"></span> <small data-i18n="dh"></small></strong>
       </div>
       <div class="field" id="fName">
         <label for="fullName" data-i18n="lName"></label>
@@ -345,7 +352,7 @@ footer .logo{margin-bottom:10px}
   </div>
 </section>
 
-<section class="bg-white">
+<section>
   <div class="wrap">
     <div class="sec-head"><h2 data-i18n="faqTitle"></h2></div>
     <div class="faq">
@@ -356,7 +363,7 @@ footer .logo{margin-bottom:10px}
   </div>
 </section>
 
-<section>
+<section class="bg-white">
   <div class="wrap">
     <div class="sec-head"><span class="eyebrow" data-i18n="xEyebrow"></span></div>
     <a class="xsell" href="/"><img src="/assets/full.webp" alt=""><div><h3 data-i18n="xTitle"></h3><p data-i18n="xSub"></p><span class="go" data-i18n="xGo"></span></div></a>
@@ -394,11 +401,11 @@ const C = Object.assign({SHEET_URL:"",WHATSAPP:"",SCARF_PRICE:149,FB_PIXEL_ID:""
 const PRICE = Number(C.SCARF_PRICE)||149;
 const PRODUCT = "Écharpe Mikassa";
 const $ = s => document.querySelector(s), $$ = s => document.querySelectorAll(s);
-const COLORS = {Noir:{ar:"كحل",fr:"Noir",c1:"#2a2725",c2:"#0f0e0d",img:"/assets/scarf-noir.webp"}, Rouge:{ar:"أحمر",fr:"Rouge",c1:"#B3242D",c2:"#6E1117",img:"/assets/scarf-rouge.webp"}};
+const COLORS = {Rouge:{ar:"أحمر",fr:"Rouge"}};
 
 const T = {
- ar:{announce:"الدفع عند الاستلام · التوصيل لجميع مدن المغرب",badge:"جديد",eyebrow:"إكسسوار أنيق",h1:"إيشارب <em>Mikassa</em>",lead:"إيشارب ناعم بتصميم أنيق وكلاسيكي، كيزيد لمسة شيك لأي لبسة. ساهل تنسقيه مع الستايل ديالك كل نهار، وهدية زوينة لمن تحب.",dh:"درهم",cod:"الدفع عند الاستلام",cta:"اطلبي الآن",t1:"التوصيل داخل فالثمن",t2:"الدفع عند الاستلام",t3:"التوصيل 24 حتال 72 ساعة",phTag:"صورة توضيحية",whyEyebrow:"علاش غادي يعجبك",whyTitle:"شيك، ساهل، كل نهار",w1:"تصميم أنيق وكلاسيكي ما كيتقاداش مع الوقت.",w2:"متوفر بلونين: الكحل والأحمر.",w3:"كيتنسق مع اللبسة الكلاسيكية والكاجوال.",w4:"هدية مثالية للزوجة، الأم ولا الأخت.",ordEyebrow:"اطلبي دابا",ordTitle:"اختاري اللون وكملي الطلب",fColor:"اللون",cBlack:"كحل",cRed:"أحمر",lName:"الإسم الكامل",phName:"الإسم والنسب",eName:"دخلي الإسم الكامل",lPhone:"رقم الهاتف",ePhone:"دخلي رقم هاتف مغربي صحيح",lAddr:"المدينة والعنوان",phAddr:"المدينة، الحي، الزنقة، رقم الدار",eAddr:"دخلي المدينة والعنوان كامل",addNote:"+ زيدي ملاحظة",phNote:"مثلاً: وقت التوصيل…",sumItem:"الإيشارب",sumShip:"التوصيل",free:"داخل فالثمن",sumTotal:"المجموع",submit:"أكدي الطلب — الدفع عند الاستلام",sending:"جاري الإرسال…",formNote:"ما كتخلصي حتى يوصلك الطلب. غادي نتصلو بيك باش نأكدو.",faqTitle:"أسئلة متكررة",q1:"كيفاش كنخلص؟",a1:"الدفع عند الاستلام، نقداً للموزع ملي يوصلك الطلب.",q2:"شحال كياخد التوصيل؟",a2:"بين 24 و72 ساعة حسب المدينة، والتوصيل داخل فالثمن.",q3:"واش نقدر نطلب جوج ألوان؟",a3:"إيه، زيدي الكمية وكتبي فالملاحظة شحال من واحد بكل لون، وغادي نأكدوها معاك فالتيليفون.",xEyebrow:"حتى هادي غادي تعجبك",xTitle:"بوكس هدية بإسم من تحب",xSub:"محفظة، قلم وسلسلة منقوشين بالإسم في علبة خشبية — 179 درهم.",xGo:"شوفي البوكس ←",footer:"هدايا وإكسسوارات · المغرب",thanks:"شكراً! توصلنا بالطلب ديالك",thanksSub:"غادي نتصلو بيك قريب باش نأكدو الطلب.",waConfirm:"أكدي عبر واتساب",close:"إغلاق",rOrder:"رقم الطلب",rColor:"اللون",rQty:"الكمية",rTotal:"المجموع",errSend:"وقع مشكل فالإرسال. عاودي المحاولة.",waHello:"السلام، بغيت نأكد الطلب ديالي"},
- fr:{announce:"Paiement à la livraison · Livraison partout au Maroc",badge:"Nouveau",eyebrow:"Accessoire chic",h1:"L'écharpe <em>Mikassa</em>",lead:"Une écharpe douce au design élégant et intemporel, qui ajoute une touche chic et raffinée à chaque tenue. Facile à assortir au quotidien, et un joli cadeau.",dh:"DH",cod:"Paiement à la livraison",cta:"Commander",t1:"Livraison incluse",t2:"Paiement à la livraison",t3:"Livrée en 24 à 72 h",phTag:"Illustration",whyEyebrow:"Pourquoi vous allez l'aimer",whyTitle:"Chic, simple, au quotidien",w1:"Un design élégant et intemporel.",w2:"Disponible en noir et en rouge.",w3:"S'accorde aux tenues classiques comme décontractées.",w4:"Le cadeau idéal pour votre femme, mère ou sœur.",ordEyebrow:"Commandez maintenant",ordTitle:"Choisissez la couleur et commandez",fColor:"Couleur",cBlack:"Noir",cRed:"Rouge",lName:"Nom complet",phName:"Prénom et nom",eName:"Entrez votre nom complet",lPhone:"Téléphone",ePhone:"Entrez un numéro marocain valide",lAddr:"Ville et adresse",phAddr:"Ville, quartier, rue, numéro",eAddr:"Entrez la ville et l'adresse complète",addNote:"+ Ajouter une note",phNote:"Ex. : heure de livraison…",sumItem:"Écharpe",sumShip:"Livraison",free:"Incluse dans le prix",sumTotal:"Total",submit:"Confirmer — paiement à la livraison",sending:"Envoi…",formNote:"Vous ne payez qu'à la réception. Nous vous appelons pour confirmer.",faqTitle:"Questions fréquentes",q1:"Comment je paie ?",a1:"Paiement à la livraison, en espèces au livreur.",q2:"Quel délai de livraison ?",a2:"Entre 24 et 72 h selon la ville, livraison incluse dans le prix.",q3:"Puis-je commander les deux couleurs ?",a3:"Oui, augmentez la quantité et précisez les couleurs dans la note ; nous confirmerons par téléphone.",xEyebrow:"Vous aimerez aussi",xTitle:"Le coffret cadeau à son nom",xSub:"Portefeuille, stylo et porte-clés gravés au prénom, en coffret bois — 179 DH.",xGo:"Voir le coffret →",footer:"Cadeaux et accessoires · Maroc",thanks:"Merci ! Commande reçue",thanksSub:"Nous vous appelons très vite pour confirmer.",waConfirm:"Confirmer sur WhatsApp",close:"Fermer",rOrder:"N° de commande",rColor:"Couleur",rQty:"Quantité",rTotal:"Total",errSend:"Erreur d'envoi. Réessayez.",waHello:"Bonjour, je veux confirmer ma commande"}
+ ar:{announce:"الدفع عند الاستلام · التوصيل لجميع مدن المغرب",badge:"جديد",eyebrow:"إكسسوار أنيق",h1:"إيشارب <em>Mikassa</em>",lead:"إيشارب ناعم بتصميم أنيق وكلاسيكي، كيزيد لمسة شيك لأي لبسة. ساهل تنسقيه مع الستايل ديالك كل نهار، وهدية زوينة لمن تحب.",dh:"درهم",cod:"الدفع عند الاستلام",cta:"اطلبي الآن",t1:"التوصيل داخل فالثمن",t2:"الدفع عند الاستلام",t3:"التوصيل 24 حتال 72 ساعة",phTag:"صورة توضيحية",whyEyebrow:"علاش غادي يعجبك",whyTitle:"شيك، ساهل، كل نهار",w1:"تصميم أنيق وكلاسيكي ما كيتقاداش مع الوقت.",w2:"لون أحمر بوردو دافئ، كيبان راقي مع أي لبسة.",w3:"كيتنسق مع اللبسة الكلاسيكية والكاجوال.",w4:"هدية مثالية للزوجة، الأم ولا الأخت.",ordEyebrow:"اطلبي دابا",ordTitle:"كملي الطلب ديالك",pickName:"إيشارب Mikassa",galEyebrow:"صور",galTitle:"شوفي الإيشارب من قريب",fColor:"اللون",cBlack:"كحل",cRed:"أحمر",lName:"الإسم الكامل",phName:"الإسم والنسب",eName:"دخلي الإسم الكامل",lPhone:"رقم الهاتف",ePhone:"دخلي رقم هاتف مغربي صحيح",lAddr:"المدينة والعنوان",phAddr:"المدينة، الحي، الزنقة، رقم الدار",eAddr:"دخلي المدينة والعنوان كامل",addNote:"+ زيدي ملاحظة",phNote:"مثلاً: وقت التوصيل…",sumItem:"الإيشارب",sumShip:"التوصيل",free:"داخل فالثمن",sumTotal:"المجموع",submit:"أكدي الطلب — الدفع عند الاستلام",sending:"جاري الإرسال…",formNote:"ما كتخلصي حتى يوصلك الطلب. غادي نتصلو بيك باش نأكدو.",faqTitle:"أسئلة متكررة",q1:"كيفاش كنخلص؟",a1:"الدفع عند الاستلام، نقداً للموزع ملي يوصلك الطلب.",q2:"شحال كياخد التوصيل؟",a2:"بين 24 و72 ساعة حسب المدينة، والتوصيل داخل فالثمن.",q3:"واش نقدر نطلب أكثر من واحد؟",a3:"إيه، زيدي الكمية فالطلب. هدية زوينة لك ولحبابك.",xEyebrow:"حتى هادي غادي تعجبك",xTitle:"بوكس هدية بإسم من تحب",xSub:"محفظة، قلم وسلسلة منقوشين بالإسم في علبة خشبية — 179 درهم.",xGo:"شوفي البوكس ←",footer:"هدايا وإكسسوارات · المغرب",thanks:"شكراً! توصلنا بالطلب ديالك",thanksSub:"غادي نتصلو بيك قريب باش نأكدو الطلب.",waConfirm:"أكدي عبر واتساب",close:"إغلاق",rOrder:"رقم الطلب",rColor:"اللون",rQty:"الكمية",rTotal:"المجموع",errSend:"وقع مشكل فالإرسال. عاودي المحاولة.",waHello:"السلام، بغيت نأكد الطلب ديالي"},
+ fr:{announce:"Paiement à la livraison · Livraison partout au Maroc",badge:"Nouveau",eyebrow:"Accessoire chic",h1:"L'écharpe <em>Mikassa</em>",lead:"Une écharpe douce au design élégant et intemporel, qui ajoute une touche chic et raffinée à chaque tenue. Facile à assortir au quotidien, et un joli cadeau.",dh:"DH",cod:"Paiement à la livraison",cta:"Commander",t1:"Livraison incluse",t2:"Paiement à la livraison",t3:"Livrée en 24 à 72 h",phTag:"Illustration",whyEyebrow:"Pourquoi vous allez l'aimer",whyTitle:"Chic, simple, au quotidien",w1:"Un design élégant et intemporel.",w2:"Un rouge bordeaux chaleureux, chic avec toutes les tenues.",w3:"S'accorde aux tenues classiques comme décontractées.",w4:"Le cadeau idéal pour votre femme, mère ou sœur.",ordEyebrow:"Commandez maintenant",ordTitle:"Finalisez votre commande",pickName:"Écharpe Mikassa",galEyebrow:"Photos",galTitle:"L'écharpe de plus près",fColor:"Couleur",cBlack:"Noir",cRed:"Rouge",lName:"Nom complet",phName:"Prénom et nom",eName:"Entrez votre nom complet",lPhone:"Téléphone",ePhone:"Entrez un numéro marocain valide",lAddr:"Ville et adresse",phAddr:"Ville, quartier, rue, numéro",eAddr:"Entrez la ville et l'adresse complète",addNote:"+ Ajouter une note",phNote:"Ex. : heure de livraison…",sumItem:"Écharpe",sumShip:"Livraison",free:"Incluse dans le prix",sumTotal:"Total",submit:"Confirmer — paiement à la livraison",sending:"Envoi…",formNote:"Vous ne payez qu'à la réception. Nous vous appelons pour confirmer.",faqTitle:"Questions fréquentes",q1:"Comment je paie ?",a1:"Paiement à la livraison, en espèces au livreur.",q2:"Quel délai de livraison ?",a2:"Entre 24 et 72 h selon la ville, livraison incluse dans le prix.",q3:"Puis-je en commander plusieurs ?",a3:"Oui, il suffit d'augmenter la quantité.",xEyebrow:"Vous aimerez aussi",xTitle:"Le coffret cadeau à son nom",xSub:"Portefeuille, stylo et porte-clés gravés au prénom, en coffret bois — 179 DH.",xGo:"Voir le coffret →",footer:"Cadeaux et accessoires · Maroc",thanks:"Merci ! Commande reçue",thanksSub:"Nous vous appelons très vite pour confirmer.",waConfirm:"Confirmer sur WhatsApp",close:"Fermer",rOrder:"N° de commande",rColor:"Couleur",rQty:"Quantité",rTotal:"Total",errSend:"Erreur d'envoi. Réessayez.",waHello:"Bonjour, je veux confirmer ma commande"}
 };
 let lang="ar";
 try{ const s=localStorage.getItem("tz_lang"); if(s==="fr"||s==="ar") lang=s; }catch(e){}
@@ -417,22 +424,11 @@ $$(".lang button").forEach(b=>b.addEventListener("click",()=>{lang=b.dataset.lan
 
 $$(".js-price").forEach(el=>el.textContent=PRICE);
 let qty=1;
-const color=()=>$("#colors input:checked").value;
-function showColor(){
-  const c=COLORS[color()], box=$("#pvScarf");
-  box.style.setProperty("--sc1",c.c1); box.style.setProperty("--sc2",c.c2);
-  // use a real photo if it exists, otherwise keep the illustration
-  let img=box.querySelector("img");
-  const probe=new Image();
-  probe.onload=()=>{ if(!img){ img=document.createElement("img"); img.alt=""; box.prepend(img);} img.src=c.img; box.querySelector("svg").style.display="none"; $("#phTag").style.display="none"; };
-  probe.onerror=()=>{ if(img) img.remove(); box.querySelector("svg").style.display=""; $("#phTag").style.display=""; };
-  probe.src=c.img;
-}
+const color=()=>"Rouge";
 function update(){
   $("#qty").textContent=qty; $("#sTotal").textContent=qty*PRICE;
   $("#sColor").textContent=COLORS[color()][lang];
 }
-$$("#colors input").forEach(r=>r.addEventListener("change",()=>{ $$("#colors label").forEach(l=>l.classList.toggle("on",l.querySelector("input").checked)); showColor(); update(); }));
 $("#qMinus").onclick=()=>{ if(qty>1){qty--;update();} };
 $("#qPlus").onclick=()=>{ if(qty<10){qty++;update();} };
 $("#addNote").onclick=()=>{ $("#addNote").style.display="none"; $("#note").style.display="block"; $("#note").focus(); };
@@ -479,7 +475,7 @@ $("#orderForm").addEventListener("submit", async e=>{
   if(C.WHATSAPP){ $("#waConfirm").href=waLink(`${t("waHello")}\n${t("rOrder")}: ${data.order_id}\n${PRODUCT} – ${col} × ${qty}\n${t("rTotal")}: ${total} ${t("dh")}`); $("#waConfirm").style.display="flex"; }
   $("#modal").classList.add("open");
   if(confirmed){ try{ if(window.fbq) fbq("track","Purchase",{value:total,currency:"MAD",content_name:PRODUCT,content_ids:["mikassa-scarf"],content_type:"product",num_items:qty},{eventID:data.order_id}); }catch(x){} }
-  e.target.reset(); qty=1; $$("#colors label").forEach((l,i)=>l.classList.toggle("on",i===0)); showColor(); update(); $("#note").style.display="none"; $("#addNote").style.display="";
+  e.target.reset(); qty=1; update(); $("#note").style.display="none"; $("#addNote").style.display="";
 });
 $("#closeModal").onclick=()=>$("#modal").classList.remove("open");
 $("#modal").addEventListener("click",e=>{ if(e.target.id==="modal") $("#modal").classList.remove("open"); });
@@ -488,7 +484,7 @@ const st=$("#sticky"); new IntersectionObserver(es=>es.forEach(en=>st.classList.
 if(C.FB_PIXEL_ID){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('set','autoConfig',false,C.FB_PIXEL_ID);fbq('init',C.FB_PIXEL_ID);fbq('track','PageView');fbq('track','ViewContent',{content_name:PRODUCT,content_ids:['mikassa-scarf'],content_type:'product',value:PRICE,currency:'MAD'});}
 
 $("#yr").textContent=new Date().getFullYear();
-showColor(); applyLang();
+applyLang();
 })();
 </script>
 </body>
